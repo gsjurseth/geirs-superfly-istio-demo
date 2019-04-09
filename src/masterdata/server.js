@@ -1,7 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import md from './md-schema.js';
-import bp from 'body-parser';
 
 let mongohost = process.env.mongohost || 'localhost';
 let mongoport = process.env.mongoport || 27017;
@@ -28,8 +27,7 @@ app.get('/md', (req, res) => {
 });
 
 app.post('/md', (req, res) => {
-  let myMD = new md(req.body)
-  myMD.save()
+  md.insertMany( req.body )
    .then(doc => {
      console.log(doc)
      return res.json(doc);

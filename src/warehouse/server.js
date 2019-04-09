@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import price from './price-schema.js';
+import warehouse from './warehouse-schema.js';
 import bp from 'body-parser';
 
 let mongohost = process.env.mongohost || 'localhost';
@@ -14,8 +14,8 @@ const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
-app.get('/price', (req, res) => {
-  price
+app.get('/warehouse', (req, res) => {
+  warehouse
   .find()
   .then(doc => {
     console.log(doc);
@@ -27,8 +27,8 @@ app.get('/price', (req, res) => {
   });
 });
 
-app.post('/price', (req, res) => {
-  price.insertMany(req.body)
+app.post('/warehouse', (req, res) => {
+  warehouse.insertMany(req.body)
    .then(doc => {
      console.log(doc)
      return res.json(doc);
@@ -39,8 +39,8 @@ app.post('/price', (req, res) => {
    });
 });
 
-app.get('/price/:name', (req, res) => {
-  price
+app.get('/warehouse/:name', (req, res) => {
+  warehouse
   .find({
     name: req.params.name 
   })
@@ -54,8 +54,8 @@ app.get('/price/:name', (req, res) => {
   });
 });
 
-app.put('/price/:name', (req, res) => {
-  price
+app.put('/warehouse/:name', (req, res) => {
+  warehouse
   .findOneAndUpdate(
     {
       name: req.params.name
@@ -75,9 +75,9 @@ app.put('/price/:name', (req, res) => {
   });
 });
 
-app.delete('/price', (req, res) => {
+app.delete('/warehouse', (req, res) => {
   if ( req.query.id ) {
-    price
+    warehouse
     .findByIdAndRemove( req.query.id )
     .then(response => {
       console.log(response);
@@ -93,8 +93,8 @@ app.delete('/price', (req, res) => {
   }
 });
 
-app.delete('/price/:name', (req, res) => {
-  price
+app.delete('/warehouse/:name', (req, res) => {
+  warehouse
   .findOneAndRemove({
     name: req.params.name
   })
