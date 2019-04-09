@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import md from './md-schema.js';
+import price from './price-schema.js';
 import bp from 'body-parser';
 
 let mongohost = process.env.mongohost || 'localhost';
@@ -14,8 +14,8 @@ const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
-app.get('/md', (req, res) => {
-  md
+app.get('/price', (req, res) => {
+  price
   .find()
   .then(doc => {
     console.log(doc);
@@ -27,9 +27,9 @@ app.get('/md', (req, res) => {
   });
 });
 
-app.post('/md', (req, res) => {
-  let myMD = new md(req.body)
-  myMD.save()
+app.post('/price', (req, res) => {
+  let myPrice = new price(req.body)
+  myPrice.save()
    .then(doc => {
      console.log(doc)
      return res.json(doc);
@@ -40,8 +40,8 @@ app.post('/md', (req, res) => {
    });
 });
 
-app.get('/md/:name', (req, res) => {
-  md
+app.get('/price/:name', (req, res) => {
+  price
   .find({
     name: req.params.name 
   })
@@ -55,8 +55,8 @@ app.get('/md/:name', (req, res) => {
   });
 });
 
-app.put('/md/:name', (req, res) => {
-  md
+app.put('/price/:name', (req, res) => {
+  price
   .findOneAndUpdate(
     {
       name: req.params.name
@@ -76,8 +76,26 @@ app.put('/md/:name', (req, res) => {
   });
 });
 
-app.delete('/md/:name', (req, res) => {
-  md
+app.delete('/price', (req, res) => {
+  if ( req.query.id ) {
+    price
+    .findByIdAndRemove( req.query.id )
+    .then(response => {
+      console.log(response);
+      return res.json(response);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
+  }
+  else {
+    return res.status(400).send("missing id");
+  }
+});
+
+app.delete('/price/:name', (req, res) => {
+  price
   .findOneAndRemove({
     name: req.params.name
   })
