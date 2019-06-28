@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 // create a schema
 const warehouseSchema = new Schema({
   name: String,
-  amount: Number
+  number: Number
 });
 
 // the schema is useless so far

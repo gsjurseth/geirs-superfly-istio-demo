@@ -45,7 +45,7 @@ spec:
             - "netstat -anp | fgrep 3000"
         env:
           - name: mongohost
-            value: my-mongo-release-mongodb-replicaset-0.my-mongo-release-mongodb-replicaset.default.svc.cluster.local
+            value: my-mongo-release-mongodb-replicaset-2.my-mongo-release-mongodb-replicaset.default.svc.cluster.local
         resources:
           requests:
             cpu: 100m

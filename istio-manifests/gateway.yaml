@@ -40,3 +40,11 @@ spec:
         host: priceservice
         port:
           number: 3000
+  - match:
+    - uri:
+        prefix: "/warehouse"
+    route:
+    - destination:
+        host: warehouseservice
+        port:
+          number: 3000

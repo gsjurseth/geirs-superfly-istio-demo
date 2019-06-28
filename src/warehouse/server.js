@@ -1,7 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import warehouse from './warehouse-schema.js';
-import bp from 'body-parser';
 
 let mongohost = process.env.mongohost || 'localhost';
 let mongoport = process.env.mongoport || 27017;
@@ -66,7 +65,6 @@ app.put('/warehouse/:name', (req, res) => {
       new: true,                       // return updated doc
     })
   .then(doc => {
-    console.log(doc)
     return res.json(doc);
   })
   .catch(err => {
@@ -76,22 +74,17 @@ app.put('/warehouse/:name', (req, res) => {
 });
 
 app.delete('/warehouse', (req, res) => {
-  if ( req.query.id ) {
-    warehouse
-    .findByIdAndRemove( req.query.id )
-    .then(response => {
-      console.log(response);
-      return res.json(response);
+  warehouse.deleteMany()
+    .then( x => {
+      console.log(x);
+      return res.json(x);
     })
-    .catch(err => {
-      console.error(err);
-      return res.status(500).send(err);
-    });
-  }
-  else {
-    return res.status(400).send("missing id");
-  }
-});
+    .catch( err => {
+      console.error(err)
+      return res.status(400).send({ msg: "done fucked up: ", error: err} );
+
+    })
+  });
 
 app.delete('/warehouse/:name', (req, res) => {
   warehouse
