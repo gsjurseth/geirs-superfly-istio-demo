@@ -18,6 +18,7 @@ type Stock struct {
 	Number int    `json:"number"`
 }
 
+// MasterData with Number added so that we can link in the number from Stock
 type MasterData struct {
 	Name   string `json:"name"`
 	Desc   string `json:"desc"`
