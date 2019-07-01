@@ -14,4 +14,3 @@ spec:
   - handler: apigee-handler
     instances:
     - apigee-analytics
-    - apigee-authorization
