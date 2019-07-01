@@ -7,11 +7,42 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/unrolled/render"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
-	"net/url"
+	"os"
 )
+
+var (
+	Trace   *log.Logger
+	Info    *log.Logger
+	Warning *log.Logger
+	Error   *log.Logger
+)
+
+func Init(
+	traceHandle io.Writer,
+	infoHandle io.Writer,
+	warningHandle io.Writer,
+	errorHandle io.Writer) {
+
+	Trace = log.New(traceHandle,
+		"TRACE: ",
+		log.Ldate|log.Ltime|log.Lshortfile)
+
+	Info = log.New(infoHandle,
+		"INFO: ",
+		log.Ldate|log.Ltime|log.Lshortfile)
+
+	Warning = log.New(warningHandle,
+		"WARNING: ",
+		log.Ldate|log.Ltime|log.Lshortfile)
+
+	Error = log.New(errorHandle,
+		"ERROR: ",
+		log.Ldate|log.Ltime|log.Lshortfile)
+}
 
 type Stock struct {
 	Name   string `json:"name"`
@@ -36,6 +67,7 @@ type Config struct {
 }
 
 func main() {
+	Init(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr)
 	r := chi.NewRouter()
 
 	// A good base middleware stack
@@ -44,18 +76,20 @@ func main() {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
-	// RESTy routes for "articles" resource
+	// RESTy routes
 	r.Route("/v1/lager", func(r chi.Router) {
 		r.Post("/", addStock)           // POST /articles
 		r.Get("/", getStockWithDetails) // GET /articles/search
 	})
 
+	Info.Println("Starting up services on port 3333")
 	http.ListenAndServe(":3333", r)
 }
 
-func get(req http.Request, ch chan<- []byte) {
+func get(req *http.Request, ch chan<- []byte) {
 	log.Printf("the url is: %s", req.URL.String())
-	resp, err := http.Get(req.URL.String())
+	var client http.Client
+	resp, err := client.Do(req)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -70,11 +104,11 @@ func get(req http.Request, ch chan<- []byte) {
 func retrieveMasterData(c Config) []MasterData {
 	masterData := []MasterData{}
 
-	Url, err := url.Parse(fmt.Sprintf("http://%s:%d/md", c.MDHOST, c.MDPORT))
-	if err != nil {
-		panic(err.Error())
+	r, e := http.NewRequest("GET", fmt.Sprintf("http://%s:%d/md", c.MDHOST, c.MDPORT), nil)
+	if e != nil {
+		panic(e.Error())
 	}
-	var r = http.Request{URL: Url}
+	r.Header.Add("x-api-key", c.MDKEY)
 	ch := make(chan []byte, 1)
 
 	get(r, ch)
@@ -91,11 +125,11 @@ func retrieveMasterData(c Config) []MasterData {
 func retrieveStock(c Config) []Stock {
 	stock := []Stock{}
 
-	Url, err := url.Parse(fmt.Sprintf("http://%s:%d/warehouse", c.WHHOST, c.WHPORT))
-	if err != nil {
-		panic(err.Error())
+	r, e := http.NewRequest("GET", fmt.Sprintf("http://%s:%d/warehouse", c.WHHOST, c.WHPORT), nil)
+	if e != nil {
+		panic(e.Error())
 	}
-	var r = http.Request{URL: Url}
+	r.Header.Add("x-api-key", c.WHKEY)
 	ch := make(chan []byte, 1)
 
 	get(r, ch)
