@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>AssignMessageaddAuthHeader</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>ServiceCalloutfetchPrices</Name>
+            </Step>
+            <Step>
+                <Name>parseAndCreateResponse</Name>
+            </Step>
+            <Step>
+                <Name>AssignMessagesetPayload</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows/>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://35.228.128.37/md</URL>
+    </HTTPTargetConnection>
+</TargetEndpoint>

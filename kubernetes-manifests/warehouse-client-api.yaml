@@ -15,38 +15,51 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: masterdataservice
+  name: warehouse-client-api-service
   namespace: app-apis
 spec:
   selector:
     matchLabels:
-      app: masterdataservice
+      app: warehouse-client-api-service
   template:
     metadata:
       labels:
-        app: masterdataservice
+        app: warehouse-client-api-service
     spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: eu.gcr.io/apigee-trashcan-backends/masterdata:2
+        image: eu.gcr.io/apigee-trashcan-backends/warehouse-client-api:3
         ports:
-        - containerPort: 3000
+        - containerPort: 3333
         readinessProbe:
           exec:
             command:
             - sh
             - -c
-            - "netstat -anp | fgrep 3000"
+            - "netstat -anp | fgrep 3333"
+          initialDelaySeconds: 5
         livenessProbe:
           exec:
             command:
             - sh
             - -c
-            - "netstat -anp | fgrep 3000"
+            - "netstat -anp | fgrep 3333"
+          initialDelaySeconds: 5
+          periodSeconds: 10
         env:
-          - name: mongohost
-            value: my-mongo-release-mongodb-replicaset-2.my-mongo-release-mongodb-replicaset.default.svc.cluster.local
+          - name: APP_MDHOST
+            value: "masterdataservice"
+          - name: APP_MDPORT
+            value: "3000"
+          - name: APP_MDKEY
+            value: "xyzabc"
+          - name: APP_WHHOST
+            value: "warehouseservice"
+          - name: APP_WHPORT
+            value: "3000"
+          - name: APP_WHKEY
+            value: "xyzabc"
         resources:
           requests:
             cpu: 100m
@@ -58,13 +71,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: masterdataservice
+  name: warehouse-client-api-service
   namespace: app-apis
 spec:
   type: ClusterIP
   selector:
-    app: masterdataservice
+    app: warehouse-client-api-service
   ports:
   - name: api
-    port: 3000
-    targetPort: 3000
+    port: 3333
+    targetPort: 3333
