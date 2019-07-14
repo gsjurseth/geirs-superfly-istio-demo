@@ -16,6 +16,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: priceservice
+  namespace: myservices
 spec:
   selector:
     matchLabels:
@@ -45,7 +46,7 @@ spec:
             - "netstat -anp | fgrep 3000"
         env:
           - name: mongohost
-            value: my-mongo-release-mongodb-replicaset-2.my-mongo-release-mongodb-replicaset.default.svc.cluster.local
+            value: mongo-mongodb.mongo.svc.cluster.local
         resources:
           requests:
             cpu: 100m
@@ -58,6 +59,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: priceservice
+  namespace: myservices
 spec:
   type: ClusterIP
   selector:
