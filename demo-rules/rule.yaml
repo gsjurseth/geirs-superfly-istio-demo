@@ -4,9 +4,9 @@ metadata:
   name: apigee-authorization-rule
   namespace: istio-system
 spec:
-  match: destination.namespace == "default"
+  match: context.reporter.kind == "inbound" && destination.namespace == "myservices"
   actions:
   - handler: apigee-handler
     instances:
-    - apigee.analytics
-    - apigee-authorization⇧
+    - apigee-analytics
+    - apigee-authorization
