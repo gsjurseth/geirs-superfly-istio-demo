@@ -24,7 +24,7 @@ Service this one is an aggregating service ostensibly used to enable the develop
 ## The APIS
 Firstly, all the ones listed above, but additionally we have have price-catalog-api published as a pure apigee service
 
-## Dependendencies
+## Dependendencies and Setup
 This whole project is using mongodb as its backend. Why? Because I talked about it a lot and had worked with other document dbs but never with mongo and that was simply unacceptable. Moreover, using mongo instead of managed service in some cloud means that this will run anywhere ... I'm not promoting the use of mongo in k8s over a managed service, but it makes this demo simple and completely contained.
 
 ### So .. the MongoDB
@@ -33,11 +33,22 @@ https://github.com/helm/charts/tree/master/stable/mongodb
 
 and deployed like so:
 ```bash
-helm install --name mongo stable/mongodb --namespace mongo
+helm install --name mongo --namespace mongo \
+  --set mongodbRootPassword=supersecret,mongodbUsername=aMagicUser,mongodbPassword=aMagicPass,mongodbDatabase=aMagicDB \
+    stable/mongodb
 ```
 
-That should result in a service name as such: `mongo-mongodb.mongo.svc.cluster.local`
+That should result in a service name as such: `mongo-mongodb.mongo.svc.cluster.local` and with a user and pass that's up to you. You'll need to use that later on when you setup the secret to get everything up and running
 
 ### istio injection
 Yeah we need to execute this as well
-`kubectl label namespace myservices istio-injection=enabled`
+```bash
+kubectl label namespace myservices istio-injection=enabled
+```
+
+### Environment variables
+You need to make sure that the pods can actually reach and authenticate with the mongo setup. For my part I've chosen to use a secret like so (NOTE: swap out user an pass for your values):
+
+```bash
+kubectl create secret generic mongoauth --from-literal=user=muser --from-literal=pass=mpass --namespace myservices
+```

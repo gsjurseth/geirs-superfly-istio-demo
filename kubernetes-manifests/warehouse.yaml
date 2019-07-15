@@ -29,7 +29,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: eu.gcr.io/apigee-trashcan-backends/warehouse:1
+        image: eu.gcr.io/apigee-trashcan-backends/warehouse:2
         ports:
         - containerPort: 3000
         readinessProbe:
@@ -47,6 +47,16 @@ spec:
         env:
           - name: mongohost
             value: mongo-mongodb.mongo.svc.cluster.local
+          - name: MONGO_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mongoauth
+                key: user
+          - name: MONGO_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongoauth
+                key: pass
         resources:
           requests:
             cpu: 100m

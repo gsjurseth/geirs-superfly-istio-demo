@@ -5,8 +5,10 @@ import bp from 'body-parser';
 
 let mongohost = process.env.mongohost || 'localhost';
 let mongoport = process.env.mongoport || 27017;
+let mongouser = process.env.MONGO_USERNAME || 'user';
+let mongopass = process.env.MONGO_PASSWORD || 'pass';
 
-mongoose.connect(`mongodb://${mongohost}:${mongoport}/test`, {useNewUrlParser: true});
+mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/myservices`, {useNewUrlParser: true});
 
 
 const app = express();
