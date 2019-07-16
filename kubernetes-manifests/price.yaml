@@ -70,11 +70,11 @@ kind: Service
 metadata:
   name: priceservice
   namespace: myservices
+  labels:
+    app: priceservice
 spec:
-  type: ClusterIP
+  ports:
+  - port: 3000
+    name: http
   selector:
     app: priceservice
-  ports:
-  - name: api
-    port: 3000
-    targetPort: 3000

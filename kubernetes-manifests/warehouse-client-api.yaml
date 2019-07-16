@@ -52,14 +52,20 @@ spec:
             value: "masterdataservice"
           - name: APP_MDPORT
             value: "3000"
-          - name: APP_MDKEY
-            value: "xyzabc"
           - name: APP_WHHOST
             value: "warehouseservice"
           - name: APP_WHPORT
             value: "3000"
-          - name: APP_WHKEY
-            value: "xyzabc"
+          - name: APP_MDKEY
+            valueFrom:
+              secretKeyRef:
+                name: whapikey
+                key: key
+          - name: APP_WYKEY
+            valueFrom:
+              secretKeyRef:
+                name: whapikey
+                key: key
         resources:
           requests:
             cpu: 100m
@@ -73,11 +79,11 @@ kind: Service
 metadata:
   name: warehouse-client-api-service
   namespace: myservices
+  labels:
+    app: warehouse-client-api-service
 spec:
-  type: ClusterIP
+  ports:
+  - port: 3333
+    name: http
   selector:
     app: warehouse-client-api-service
-  ports:
-  - name: api
-    port: 3333
-    targetPort: 3333

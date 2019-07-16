@@ -46,9 +46,17 @@ Yeah we need to execute this as well
 kubectl label namespace myservices istio-injection=enabled
 ```
 
-### Environment variables
+### Secrets for both mongo and the warehouse-client-api
 You need to make sure that the pods can actually reach and authenticate with the mongo setup. For my part I've chosen to use a secret like so (NOTE: swap out user an pass for your values):
 
 ```bash
 kubectl create secret generic mongoauth --from-literal=user=muser --from-literal=pass=mpass --namespace myservices
 ```
+
+And with that done we need to provide a secret (an api key) to the warehouse-client-api so that it can authenticate with the other services (masterdata and warehouse). What i've done is to create a mesh-api-product and then an app based on that. Grab that key and use it for the secret like so:
+
+```bash
+kubectl create secret generic whapikey --from-literal=key=dakey --namespace myservices
+```
+
+The spec for the warehouse-client-api is already setup to look for and use this key just as the other services are already looking for the mongoauth credentials.

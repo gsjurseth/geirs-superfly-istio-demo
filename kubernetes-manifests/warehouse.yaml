@@ -70,11 +70,11 @@ kind: Service
 metadata:
   name: warehouseservice
   namespace: myservices
+  labels:
+    app: warehouseservice
 spec:
-  type: ClusterIP
+  ports:
+  - port: 3000
+    name: http
   selector:
     app: warehouseservice
-  ports:
-  - name: api
-    port: 3000
-    targetPort: 3000

@@ -70,11 +70,11 @@ kind: Service
 metadata:
   name: masterdataservice
   namespace: myservices
+  labels:
+    app: masterdataservice
 spec:
-  type: ClusterIP
+  ports:
+  - port: 3000
+    name: http
   selector:
     app: masterdataservice
-  ports:
-  - name: api
-    port: 3000
-    targetPort: 3000
