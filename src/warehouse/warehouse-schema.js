@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 
 // create a schema
 const warehouseSchema = new Schema({
-  name: String,
-  number: Number
+  name: { type: String, required: true },
+  number: { type: Number, required: true }
 });
 
 // the schema is useless so far

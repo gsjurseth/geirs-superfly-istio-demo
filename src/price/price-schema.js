@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 
 // create a schema
 const priceSchema = new Schema({
-  name: String,
-  price: Number
+  name: { type: String, required: true },
+  price: { type: Number, required: true }
 });
 
 // the schema is useless so far

@@ -5,9 +5,9 @@ const Schema = mongoose.Schema;
 
 // create a schema
 const masterdataSchema = new Schema({
-  name: String,
-  desc: String,
-  imgUrl: String
+  name: { type: String, required: true  },
+  desc: { type: String, required: true  },
+  imgUrl: { type: String, required: true  }
 });
 
 // the schema is useless so far
