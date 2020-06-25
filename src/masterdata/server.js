@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import mongoose from 'mongoose';
 import md from './md-schema.js';
 
@@ -7,7 +8,7 @@ let mongoport = process.env.mongoport || 27017;
 let mongouser = process.env.MONGO_USERNAME || 'user';
 let mongopass = process.env.MONGO_PASSWORD || 'pass';
 
-mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/myservices`, {useNewUrlParser: true});
+mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/aMagicDB`, {useNewUrlParser: true});
 
 
 const app = express();
@@ -15,7 +16,10 @@ const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
-app.get('/md', (req, res) => {
+app.options('/md', cors());
+app.options('/md/:name', cors());
+
+app.get('/md', cors(), (req, res) => {
   md
   .find()
   .then(doc => {
@@ -28,7 +32,7 @@ app.get('/md', (req, res) => {
   });
 });
 
-app.post('/md', (req, res) => {
+app.post('/md', cors(), (req, res) => {
   md.insertMany( req.body )
    .then(doc => {
      console.log(doc)
@@ -40,7 +44,7 @@ app.post('/md', (req, res) => {
    });
 });
 
-app.get('/md/:name', (req, res) => {
+app.get('/md/:name', cors(), (req, res) => {
   md
   .find({
     name: req.params.name 
@@ -55,7 +59,7 @@ app.get('/md/:name', (req, res) => {
   });
 });
 
-app.put('/md/:name', (req, res) => {
+app.put('/md/:name', cors(), (req, res) => {
   md
   .findOneAndUpdate(
     {
@@ -76,7 +80,7 @@ app.put('/md/:name', (req, res) => {
   });
 });
 
-app.delete('/md/:name', (req, res) => {
+app.delete('/md/:name', cors(), (req, res) => {
   md
   .findOneAndRemove({
     name: req.params.name

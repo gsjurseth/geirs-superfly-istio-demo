@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import mongoose from 'mongoose';
 import price from './price-schema.js';
 import bp from 'body-parser';
@@ -8,12 +9,14 @@ let mongoport = process.env.mongoport || 27017;
 let mongouser = process.env.MONGO_USERNAME || 'user';
 let mongopass = process.env.MONGO_PASSWORD || 'pass';
 
-mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/myservices`, {useNewUrlParser: true});
+mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/aMagicDB`, {useNewUrlParser: true});
 
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.options('/price', cors());
+app.options('/price/:name', cors());
 
 app.use(express.json());
 app.get('/price', (req, res) => {

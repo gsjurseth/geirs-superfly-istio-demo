@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import mongoose from 'mongoose';
 import warehouse from './warehouse-schema.js';
 
@@ -7,12 +8,15 @@ let mongoport = process.env.mongoport || 27017;
 let mongouser = process.env.MONGO_USERNAME || 'user';
 let mongopass = process.env.MONGO_PASSWORD || 'pass';
 
-mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/myservices`, {useNewUrlParser: true});
+mongoose.connect(`mongodb://${mongouser}:${mongopass}@${mongohost}:${mongoport}/aMagicDB`, {useNewUrlParser: true});
 
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+
+app.options('/warehouse', cors());
+app.options('/warehouse/:name', cors());
 
 app.use(express.json());
 app.get('/warehouse', (req, res) => {
