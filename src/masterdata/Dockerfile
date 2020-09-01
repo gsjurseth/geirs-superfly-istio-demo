@@ -15,5 +15,9 @@ RUN npm install
 # Bundle app source
 COPY *.js ./
 
+# copy the babelrc config
+COPY .babelrc ./
+
+
 EXPOSE 3000
 CMD [ "npm", "start" ]

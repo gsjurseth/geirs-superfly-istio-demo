@@ -1,0 +1,12 @@
+{
+  "gsjurseth+external-mesh@google.com": [{
+    "apiProducts" : [ "External-Mesh-APIs" ],
+    "name" : "ExternalAPP",
+    "scopes": []
+  }],
+  "gsjurseth+internal-mesh@google.com": [{
+    "apiProducts" : [ "Internal-Mesh-APIs" ],
+    "name" : "InternalAPP",
+    "scopes": []
+  }]
+}

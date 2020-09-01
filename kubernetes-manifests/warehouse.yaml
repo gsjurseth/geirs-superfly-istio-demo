@@ -21,15 +21,18 @@ spec:
   selector:
     matchLabels:
       app: warehouseservice
+      version: v1
   template:
     metadata:
       labels:
         app: warehouseservice
+        version: v1
+        managed-by: apigee
     spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: eu.gcr.io/apigee-trashcan-backends/warehouse:2
+        image: eu.gcr.io/geirs-purdy-project/warehouse:2
         ports:
         - containerPort: 3000
         readinessProbe:
@@ -46,7 +49,7 @@ spec:
             - "netstat -anp | fgrep 3000"
         env:
           - name: mongohost
-            value: mongo-mongodb.mongo.svc.cluster.local
+            value: mongodb-1593074301.mongo.svc.cluster.local
           - name: MONGO_USERNAME
             valueFrom:
               secretKeyRef:

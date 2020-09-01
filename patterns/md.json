@@ -1,0 +1,14 @@
+{
+  "GetMasterdata": {
+    "$http": {
+      "url": " http://35.228.61.228/md",
+      "requestSignature": "a8eExFhx4TAjnpwsbYeX/w==:11xnpmRfgP27HgURoPGzh2lZ9fSTPmfaVl50Tfn4DRanIgAZIMg+DWC02Td/pyJrewJM2sCKJiaDQ9/EHOui7g==",
+      "headers": {
+        "x-api-key": "QGNsdj5YBBSC1NhxnPwQL3raoEp0opkT"
+      }
+    }
+  },
+  "Display_prices": {
+    "$ref": "GetMasterdata.$table(\"Name|Description|Image\",body.name,body.desc,body.imgUrl)"
+  }
+}

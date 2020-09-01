@@ -1,0 +1,71 @@
+[
+  {
+    "apiResources" : [ "/v1/lager", "/md", "/verifyApiKey", "/warehouse", "/"  ],
+    "approvalType" : "auto",
+    "attributes" : [ {
+      "name" : "access",
+      "value" : "public"
+      }, 
+      {
+        "name" : "apigee-remote-service-targets",
+        "value" : "masterdataservice.myservices.svc.cluster.local:3000, warehouseservice.myservices.svc.cluster.local:3000"
+    }],
+    "createdAt" : 1593074747575,
+    "createdBy" : "gsjurseth@google.com",
+    "description" : "For access to the mesh APIs from other mesh services",
+    "displayName" : "Internal-Mesh-APIs",
+    "environments" : [ "prod", "test"  ],
+    "lastModifiedAt" : 1593094419403,
+    "lastModifiedBy" : "gsjurseth@google.com",
+    "name" : "Internal-Mesh-APIs",
+    "proxies" : [ "remote-service"  ],
+    "quota" : "10",
+    "quotaInterval" : "1",
+    "quotaTimeUnit" : "minute",
+    "scopes" : [ ]
+
+  },
+  {
+    "apiResources" : [ "/v1/lager", "/verifyApiKey", "/"  ],
+    "approvalType" : "auto",
+    "attributes" : [{
+      "name" : "access",
+      "value" : "public"
+      }, 
+      {
+      "name" : "apigee-remote-service-targets",
+      "value" : "35.228.61.228,warehouse-client-api-service.myservices.svc.cluster.local:3333"
+    }],
+    "createdAt" : 1593088124343,
+    "createdBy" : "gsjurseth@google.com",
+    "description" : "",
+    "displayName" : "External-Mesh-APIs",
+    "environments" : [ "prod", "test"  ],
+    "lastModifiedAt" : 1593096243430,
+    "lastModifiedBy" : "gsjurseth@google.com",
+    "name" : "External-Mesh-APIs",
+    "proxies" : [ "remote-service"  ],
+    "quota" : "5",
+    "quotaInterval" : "1",
+    "quotaTimeUnit" : "minute",
+    "scopes" : [ ]
+  },
+  {
+    "apiResources" : [ ],
+    "approvalType" : "auto",
+    "attributes" : [ {
+      "name" : "access",
+      "value" : "public"
+    }],
+    "createdAt" : 1598347132467,
+    "createdBy" : "gsjurseth@google.com",
+    "description" : "",
+    "displayName" : "Catalog apis",
+    "environments" : [ "prod", "test"  ],
+    "lastModifiedAt" : 1598347132467,
+    "lastModifiedBy" : "gsjurseth@google.com",
+    "name" : "Catalog-APIs",
+    "proxies" : [ "products", "catalog" ],
+    "scopes" : [ ]
+  }
+]

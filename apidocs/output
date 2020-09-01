@@ -1,0 +1,2057 @@
+[1mApache Maven 3.6.0[m
+Maven home: /usr/share/maven
+Java version: 1.8.0_242, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.4.57-07393-g3f0082cb2d20", arch: "amd64", family: "unix"
+[[1;36mDEBUG[m] Created new class realm maven.api
+[[1;36mDEBUG[m] Importing foreign packages into class realm maven.api
+[[1;36mDEBUG[m]   Imported: javax.annotation.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.annotation.security.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.enterprise.inject.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.enterprise.util.* < plexus.core
+[[1;36mDEBUG[m]   Imported: javax.inject.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.artifact < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.classrealm < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.cli < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.configuration < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.exception < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.execution < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.execution.scope < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.lifecycle < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.model < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.monitor < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.plugin < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.profiles < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.project < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.reporting < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.repository < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.rtinfo < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.settings < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.toolchain < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.usability < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.events < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.observers < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.repository < plexus.core
+[[1;36mDEBUG[m]   Imported: org.apache.maven.wagon.resource < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.classworlds < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.component < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.configuration < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.container < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.context < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.logging < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.personality < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[[1;36mDEBUG[m]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.artifact < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.collection < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.deployment < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.graph < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.impl < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.installation < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.metadata < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.repository < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.resolution < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.spi < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.transfer < plexus.core
+[[1;36mDEBUG[m]   Imported: org.eclipse.aether.version < plexus.core
+[[1;36mDEBUG[m]   Imported: org.fusesource.jansi.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.helpers.* < plexus.core
+[[1;36mDEBUG[m]   Imported: org.slf4j.spi.* < plexus.core
+[[1;36mDEBUG[m] Populating class realm maven.api
+[[1;34mINFO[m] Error stacktraces are turned on.
+[[1;36mDEBUG[m] Message scheme: color
+[[1;36mDEBUG[m] Message styles: [1;36mdebug[m [1;34minfo[m [1;33mwarning[m [1;31merror[m [1;32msuccess[m [1;31mfailure[m [1mstrong[m [32mmojo[m [36mproject[m
+[[1;36mDEBUG[m] Reading global settings from /usr/share/maven/conf/settings.xml
+[[1;36mDEBUG[m] Reading user settings from /home/gsjurseth/.m2/settings.xml
+[[1;36mDEBUG[m] Reading global toolchains from /usr/share/maven/conf/toolchains.xml
+[[1;36mDEBUG[m] Reading user toolchains from /home/gsjurseth/.m2/toolchains.xml
+[[1;36mDEBUG[m] Using local repository at /home/gsjurseth/.m2/repository
+[[1;36mDEBUG[m] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/gsjurseth/.m2/repository
+[[1;34mINFO[m] Scanning for projects...
+[[1;36mDEBUG[m] Extension realms for project apigee:products:pom:1.0: (none)
+[[1;36mDEBUG[m] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[[1;36mDEBUG[m] Extension realms for project apigee:parent-pom:pom:1.0: (none)
+[[1;36mDEBUG[m] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[[1;36mDEBUG[m] === REACTOR BUILD PLAN ================================================
+[[1;36mDEBUG[m] Project: apigee:products:pom:1.0
+[[1;36mDEBUG[m] Tasks:   [install]
+[[1;36mDEBUG[m] Style:   Regular
+[[1;36mDEBUG[m] =======================================================================
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--------------------------< [0;36mapigee:products[0;1m >---------------------------[m
+[[1;34mINFO[m] [1mBuilding products 1.0[m
+[[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[[1;36mDEBUG[m] Lifecycle clean -> [pre-clean, clean, post-clean]
+[[1;36mDEBUG[m] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[[1;36mDEBUG[m] === PROJECT BUILD PLAN ================================================
+[[1;36mDEBUG[m] Project:       apigee:products:1.0
+[[1;36mDEBUG[m] Dependencies (collect): []
+[[1;36mDEBUG[m] Dependencies (resolve): []
+[[1;36mDEBUG[m] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[[1;36mDEBUG[m] Repositories (plugins)     : [central (https://repo1.maven.org/maven2, default, releases)]
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          org.apache.maven.plugins:maven-install-plugin:2.4:install (default-install)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifact default-value="${project.artifact}"/>
+  <attachedArtifacts default-value="${project.attachedArtifacts}"/>
+  <createChecksum default-value="false">${createChecksum}</createChecksum>
+  <localRepository>${localRepository}</localRepository>
+  <packaging default-value="${project.packaging}"/>
+  <pomFile default-value="${project.file}"/>
+  <skip default-value="false">${maven.install.skip}</skip>
+  <updateReleaseInfo default-value="false">${updateReleaseInfo}</updateReleaseInfo>
+</configuration>
+[[1;36mDEBUG[m] -----------------------------------------------------------------------
+[[1;36mDEBUG[m] Goal:          com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc (smartdocs-deploy)
+[[1;36mDEBUG[m] Style:         Regular
+[[1;36mDEBUG[m] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifactId>${project.artifactId}</artifactId>
+  <baseDirectory>${basedir}</baseDirectory>
+  <buildDirectory>${project.build.directory}</buildDirectory>
+  <buildOption>${build.option}</buildOption>
+  <configDir>${apigee.smartdocs.config.dir}</configDir>
+  <id>${apigee.profile}</id>
+  <options>${apigee.smartdocs.config.options}</options>
+  <portalAPIDocFormat>${portal.api.doc.format}</portalAPIDocFormat>
+  <portalCronKey>${portal.cronkey}</portalCronKey>
+  <portalDirectory>${portal.directory}</portalDirectory>
+  <portalFormat>${portal.format}</portalFormat>
+  <portalPassword>${portal.password}</portalPassword>
+  <portalPath>${portal.path}</portalPath>
+  <portalURL>${portal.url}</portalURL>
+  <portalUserName>${portal.username}</portalUserName>
+  <projectName>${project.name}</projectName>
+  <projectVersion>${project.version}</projectVersion>
+  <skip default-value="false"/>
+</configuration>
+[[1;36mDEBUG[m] =======================================================================
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-install-plugin:2.4:install[m [1m(default-install)[m @ [36mproducts[0;1m ---[m
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=1777701, ConflictMarker.markTime=665602, ConflictMarker.nodeCount=38, ConflictIdSorter.graphTime=857776, ConflictIdSorter.topsortTime=594797, ConflictIdSorter.conflictIdCount=15, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=5828886, ConflictResolver.conflictItemCount=35, DefaultDependencyCollector.collectTime=135872874, DefaultDependencyCollector.transformTime=13457571}
+[[1;36mDEBUG[m] org.apache.maven.plugins:maven-install-plugin:jar:2.4:
+[[1;36mDEBUG[m]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-project:jar:2.0.6:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[[1;36mDEBUG[m]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[[1;36mDEBUG[m]          junit:junit:jar:3.8.1:compile
+[[1;36mDEBUG[m]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-model:jar:2.0.6:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[[1;36mDEBUG[m]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[[1;36mDEBUG[m]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-utils:jar:3.0.5:compile
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-digest:jar:1.0:compile
+[[1;36mDEBUG[m] Created new class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.4
+[[1;36mDEBUG[m] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.4
+[[1;36mDEBUG[m]   Imported:  < maven.api
+[[1;36mDEBUG[m] Populating class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.4
+[[1;36mDEBUG[m]   Included: org.apache.maven.plugins:maven-install-plugin:jar:2.4
+[[1;36mDEBUG[m]   Included: junit:junit:jar:3.8.1
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.5
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-digest:jar:1.0
+[[1;36mDEBUG[m] Configuring mojo org.apache.maven.plugins:maven-install-plugin:2.4:install from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-install-plugin:2.4, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[[1;36mDEBUG[m] Configuring mojo 'org.apache.maven.plugins:maven-install-plugin:2.4:install' with basic configurator -->
+[[1;36mDEBUG[m]   (f) artifact = apigee:products:pom:1.0
+[[1;36mDEBUG[m]   (f) attachedArtifacts = []
+[[1;36mDEBUG[m]   (f) createChecksum = false
+[[1;36mDEBUG[m]   (f) localRepository =       id: local
+      url: file:///home/gsjurseth/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[[1;36mDEBUG[m]   (f) packaging = pom
+[[1;36mDEBUG[m]   (f) pomFile = /home/gsjurseth/git/geirs-superfly-istio-demo/apidocs/pom.xml
+[[1;36mDEBUG[m]   (s) skip = false
+[[1;36mDEBUG[m]   (f) updateReleaseInfo = false
+[[1;36mDEBUG[m] -- end configuration --
+[[1;34mINFO[m] Installing /home/gsjurseth/git/geirs-superfly-istio-demo/apidocs/pom.xml to /home/gsjurseth/.m2/repository/apigee/products/1.0/products-1.0.pom
+[[1;36mDEBUG[m] Writing tracking file /home/gsjurseth/.m2/repository/apigee/products/1.0/_remote.repositories
+[[1;36mDEBUG[m] Installing apigee:products/maven-metadata.xml to /home/gsjurseth/.m2/repository/apigee/products/maven-metadata-local.xml
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mapigee-smartdocs-maven-plugin:2.0.1:apidoc[m [1m(smartdocs-deploy)[m @ [36mproducts[0;1m ---[m
+[[1;36mDEBUG[m] Dependency collection stats: {ConflictMarker.analyzeTime=1904062, ConflictMarker.markTime=792323, ConflictMarker.nodeCount=302, ConflictIdSorter.graphTime=864072, ConflictIdSorter.topsortTime=134189, ConflictIdSorter.conflictIdCount=80, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=12119191, ConflictResolver.conflictItemCount=167, DefaultDependencyCollector.collectTime=485117499, DefaultDependencyCollector.transformTime=15849657}
+[[1;36mDEBUG[m] com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:jar:2.0.1:
+[[1;36mDEBUG[m]    org.apache.maven:maven-plugin-api:jar:2.0:compile
+[[1;36mDEBUG[m]    org.codehaus.plexus:plexus-utils:jar:3.0.8:compile
+[[1;36mDEBUG[m]    org.apache.axis2:axis2-kernel:jar:1.3:compile
+[[1;36mDEBUG[m]       javax.servlet:servlet-api:jar:2.3:compile
+[[1;36mDEBUG[m]       commons-httpclient:commons-httpclient:jar:3.0.1:compile
+[[1;36mDEBUG[m]       commons-fileupload:commons-fileupload:jar:1.1.1:compile
+[[1;36mDEBUG[m]       wsdl4j:wsdl4j:jar:1.6.2:compile
+[[1;36mDEBUG[m]       backport-util-concurrent:backport-util-concurrent:jar:2.2:compile
+[[1;36mDEBUG[m]       org.codehaus.woodstox:wstx-asl:jar:3.2.1:compile
+[[1;36mDEBUG[m]          stax:stax-api:jar:1.0.1:compile
+[[1;36mDEBUG[m]       org.apache.ws.commons.schema:XmlSchema:jar:1.3.2:compile
+[[1;36mDEBUG[m]       org.apache.neethi:neethi:jar:2.0.2:compile
+[[1;36mDEBUG[m]       annogen:annogen:jar:0.1.0:compile
+[[1;36mDEBUG[m]       org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1:compile
+[[1;36mDEBUG[m]       commons-logging:commons-logging:jar:1.1:compile
+[[1;36mDEBUG[m]          logkit:logkit:jar:1.0.1:compile
+[[1;36mDEBUG[m]          avalon-framework:avalon-framework:jar:4.1.3:compile
+[[1;36mDEBUG[m]       org.apache.ws.commons.axiom:axiom-api:jar:1.2.5:compile
+[[1;36mDEBUG[m]          jaxen:jaxen:jar:1.1-beta-9:compile
+[[1;36mDEBUG[m]          xml-apis:xml-apis:jar:1.3.03:compile
+[[1;36mDEBUG[m]       org.apache.ws.commons.axiom:axiom-impl:jar:1.2.5:compile
+[[1;36mDEBUG[m]       org.apache.ws.commons.axiom:axiom-dom:jar:1.2.5:compile
+[[1;36mDEBUG[m]       javax.mail:mail:jar:1.4:compile
+[[1;36mDEBUG[m]          javax.activation:activation:jar:1.1:compile
+[[1;36mDEBUG[m]       xalan:xalan:jar:2.7.0:compile
+[[1;36mDEBUG[m]       xerces:xercesImpl:jar:2.8.1:compile
+[[1;36mDEBUG[m]       commons-io:commons-io:jar:1.2:compile
+[[1;36mDEBUG[m]    org.apache.axis2:axis2-metadata:jar:1.3:compile
+[[1;36mDEBUG[m]       org.apache.axis2:axis2-jws-api:jar:1.3:compile
+[[1;36mDEBUG[m]          org.apache.ant:ant:jar:1.7.0:compile
+[[1;36mDEBUG[m]          org.apache.ant:ant-launcher:jar:1.7.0:compile
+[[1;36mDEBUG[m]       org.apache.axis2:axis2-jaxws-api:jar:1.3:compile
+[[1;36mDEBUG[m]          org.apache.axis2:axis2-saaj-api:jar:1.3:compile
+[[1;36mDEBUG[m]             org.apache.geronimo.specs:geronimo-javamail_1.4_spec:jar:1.0-M1:compile
+[[1;36mDEBUG[m]             org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.0-M1:compile
+[[1;36mDEBUG[m]       org.apache.axis2:axis2-saaj:jar:1.3:compile
+[[1;36mDEBUG[m]       com.sun.xml.bind:jaxb-impl:jar:2.0.5:compile
+[[1;36mDEBUG[m]          javax.xml.bind:jsr173_api:jar:1.0:compile
+[[1;36mDEBUG[m]       com.sun.xml.bind:jaxb-xjc:jar:2.0.5:compile
+[[1;36mDEBUG[m]       log4j:log4j:jar:1.2.14:compile
+[[1;36mDEBUG[m]       javax.xml.bind:jaxb-api:jar:2.0:compile
+[[1;36mDEBUG[m]    com.google.http-client:google-http-client:jar:1.23.0:compile
+[[1;36mDEBUG[m]       com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[[1;36mDEBUG[m]       org.apache.httpcomponents:httpclient:jar:4.0.1:compile
+[[1;36mDEBUG[m]          org.apache.httpcomponents:httpcore:jar:4.0.1:compile
+[[1;36mDEBUG[m]    com.google.http-client:google-http-client-jackson:jar:1.23.0:compile
+[[1;36mDEBUG[m]       org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile
+[[1;36mDEBUG[m]    com.google.code.gson:gson:jar:2.6.2:compile
+[[1;36mDEBUG[m]    org.slf4j:slf4j-log4j12:jar:1.6.6:compile
+[[1;36mDEBUG[m]       org.slf4j:slf4j-api:jar:1.6.6:compile
+[[1;36mDEBUG[m]    org.eclipse.jgit:org.eclipse.jgit:jar:3.3.2.201404171909-r:compile
+[[1;36mDEBUG[m]       com.jcraft:jsch:jar:0.1.50:compile
+[[1;36mDEBUG[m]       com.googlecode.javaewah:JavaEWAH:jar:0.7.9:compile
+[[1;36mDEBUG[m]    com.googlecode.json-simple:json-simple:jar:1.1.1:compile
+[[1;36mDEBUG[m]       junit:junit:jar:4.10:compile
+[[1;36mDEBUG[m]          org.hamcrest:hamcrest-core:jar:1.1:compile
+[[1;36mDEBUG[m]    org.springframework:spring-core:jar:4.3.20.RELEASE:compile
+[[1;36mDEBUG[m]    org.springframework:spring-context:jar:4.3.20.RELEASE:compile
+[[1;36mDEBUG[m]       org.springframework:spring-aop:jar:4.3.20.RELEASE:compile
+[[1;36mDEBUG[m]       org.springframework:spring-beans:jar:4.3.20.RELEASE:compile
+[[1;36mDEBUG[m]       org.springframework:spring-expression:jar:4.3.20.RELEASE:compile
+[[1;36mDEBUG[m]    org.springframework:spring-web:jar:4.3.20.RELEASE:compile
+[[1;36mDEBUG[m]    cglib:cglib:jar:2.2.2:compile
+[[1;36mDEBUG[m]       asm:asm:jar:3.3.1:compile
+[[1;36mDEBUG[m]    org.yaml:snakeyaml:jar:1.19:compile
+[[1;36mDEBUG[m]    com.auth0:java-jwt:jar:3.1.0:compile
+[[1;36mDEBUG[m]       com.fasterxml.jackson.core:jackson-databind:jar:2.8.4:compile
+[[1;36mDEBUG[m]          com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[[1;36mDEBUG[m]          com.fasterxml.jackson.core:jackson-core:jar:2.8.4:compile
+[[1;36mDEBUG[m]       commons-codec:commons-codec:jar:1.10:compile
+[[1;36mDEBUG[m]       org.bouncycastle:bcprov-jdk15on:jar:1.55:compile
+[[1;36mDEBUG[m]    org.apache.commons:commons-text:jar:1.2:compile
+[[1;36mDEBUG[m]       org.apache.commons:commons-lang3:jar:3.7:compile
+[[1;36mDEBUG[m] Created new class realm plugin>com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1
+[[1;36mDEBUG[m] Importing foreign packages into class realm plugin>com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1
+[[1;36mDEBUG[m]   Imported:  < maven.api
+[[1;36mDEBUG[m] Populating class realm plugin>com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1
+[[1;36mDEBUG[m]   Included: com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:jar:2.0.1
+[[1;36mDEBUG[m]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.8
+[[1;36mDEBUG[m]   Included: org.apache.axis2:axis2-kernel:jar:1.3
+[[1;36mDEBUG[m]   Included: javax.servlet:servlet-api:jar:2.3
+[[1;36mDEBUG[m]   Included: commons-httpclient:commons-httpclient:jar:3.0.1
+[[1;36mDEBUG[m]   Included: commons-fileupload:commons-fileupload:jar:1.1.1
+[[1;36mDEBUG[m]   Included: wsdl4j:wsdl4j:jar:1.6.2
+[[1;36mDEBUG[m]   Included: backport-util-concurrent:backport-util-concurrent:jar:2.2
+[[1;36mDEBUG[m]   Included: org.codehaus.woodstox:wstx-asl:jar:3.2.1
+[[1;36mDEBUG[m]   Included: stax:stax-api:jar:1.0.1
+[[1;36mDEBUG[m]   Included: org.apache.ws.commons.schema:XmlSchema:jar:1.3.2
+[[1;36mDEBUG[m]   Included: org.apache.neethi:neethi:jar:2.0.2
+[[1;36mDEBUG[m]   Included: annogen:annogen:jar:0.1.0
+[[1;36mDEBUG[m]   Included: org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1
+[[1;36mDEBUG[m]   Included: commons-logging:commons-logging:jar:1.1
+[[1;36mDEBUG[m]   Included: logkit:logkit:jar:1.0.1
+[[1;36mDEBUG[m]   Included: avalon-framework:avalon-framework:jar:4.1.3
+[[1;36mDEBUG[m]   Included: org.apache.ws.commons.axiom:axiom-api:jar:1.2.5
+[[1;36mDEBUG[m]   Included: jaxen:jaxen:jar:1.1-beta-9
+[[1;36mDEBUG[m]   Included: xml-apis:xml-apis:jar:1.3.03
+[[1;36mDEBUG[m]   Included: org.apache.ws.commons.axiom:axiom-impl:jar:1.2.5
+[[1;36mDEBUG[m]   Included: org.apache.ws.commons.axiom:axiom-dom:jar:1.2.5
+[[1;36mDEBUG[m]   Included: javax.mail:mail:jar:1.4
+[[1;36mDEBUG[m]   Included: javax.activation:activation:jar:1.1
+[[1;36mDEBUG[m]   Included: xalan:xalan:jar:2.7.0
+[[1;36mDEBUG[m]   Included: xerces:xercesImpl:jar:2.8.1
+[[1;36mDEBUG[m]   Included: commons-io:commons-io:jar:1.2
+[[1;36mDEBUG[m]   Included: org.apache.axis2:axis2-metadata:jar:1.3
+[[1;36mDEBUG[m]   Included: org.apache.axis2:axis2-jws-api:jar:1.3
+[[1;36mDEBUG[m]   Included: org.apache.ant:ant:jar:1.7.0
+[[1;36mDEBUG[m]   Included: org.apache.ant:ant-launcher:jar:1.7.0
+[[1;36mDEBUG[m]   Included: org.apache.axis2:axis2-jaxws-api:jar:1.3
+[[1;36mDEBUG[m]   Included: org.apache.axis2:axis2-saaj-api:jar:1.3
+[[1;36mDEBUG[m]   Included: org.apache.geronimo.specs:geronimo-javamail_1.4_spec:jar:1.0-M1
+[[1;36mDEBUG[m]   Included: org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.0-M1
+[[1;36mDEBUG[m]   Included: org.apache.axis2:axis2-saaj:jar:1.3
+[[1;36mDEBUG[m]   Included: com.sun.xml.bind:jaxb-impl:jar:2.0.5
+[[1;36mDEBUG[m]   Included: javax.xml.bind:jsr173_api:jar:1.0
+[[1;36mDEBUG[m]   Included: com.sun.xml.bind:jaxb-xjc:jar:2.0.5
+[[1;36mDEBUG[m]   Included: log4j:log4j:jar:1.2.14
+[[1;36mDEBUG[m]   Included: javax.xml.bind:jaxb-api:jar:2.0
+[[1;36mDEBUG[m]   Included: com.google.http-client:google-http-client:jar:1.23.0
+[[1;36mDEBUG[m]   Included: com.google.code.findbugs:jsr305:jar:1.3.9
+[[1;36mDEBUG[m]   Included: org.apache.httpcomponents:httpclient:jar:4.0.1
+[[1;36mDEBUG[m]   Included: org.apache.httpcomponents:httpcore:jar:4.0.1
+[[1;36mDEBUG[m]   Included: com.google.http-client:google-http-client-jackson:jar:1.23.0
+[[1;36mDEBUG[m]   Included: org.codehaus.jackson:jackson-core-asl:jar:1.9.11
+[[1;36mDEBUG[m]   Included: com.google.code.gson:gson:jar:2.6.2
+[[1;36mDEBUG[m]   Included: org.slf4j:slf4j-log4j12:jar:1.6.6
+[[1;36mDEBUG[m]   Included: org.eclipse.jgit:org.eclipse.jgit:jar:3.3.2.201404171909-r
+[[1;36mDEBUG[m]   Included: com.jcraft:jsch:jar:0.1.50
+[[1;36mDEBUG[m]   Included: com.googlecode.javaewah:JavaEWAH:jar:0.7.9
+[[1;36mDEBUG[m]   Included: com.googlecode.json-simple:json-simple:jar:1.1.1
+[[1;36mDEBUG[m]   Included: junit:junit:jar:4.10
+[[1;36mDEBUG[m]   Included: org.hamcrest:hamcrest-core:jar:1.1
+[[1;36mDEBUG[m]   Included: org.springframework:spring-core:jar:4.3.20.RELEASE
+[[1;36mDEBUG[m]   Included: org.springframework:spring-context:jar:4.3.20.RELEASE
+[[1;36mDEBUG[m]   Included: org.springframework:spring-aop:jar:4.3.20.RELEASE
+[[1;36mDEBUG[m]   Included: org.springframework:spring-beans:jar:4.3.20.RELEASE
+[[1;36mDEBUG[m]   Included: org.springframework:spring-expression:jar:4.3.20.RELEASE
+[[1;36mDEBUG[m]   Included: org.springframework:spring-web:jar:4.3.20.RELEASE
+[[1;36mDEBUG[m]   Included: cglib:cglib:jar:2.2.2
+[[1;36mDEBUG[m]   Included: asm:asm:jar:3.3.1
+[[1;36mDEBUG[m]   Included: org.yaml:snakeyaml:jar:1.19
+[[1;36mDEBUG[m]   Included: com.auth0:java-jwt:jar:3.1.0
+[[1;36mDEBUG[m]   Included: com.fasterxml.jackson.core:jackson-databind:jar:2.8.4
+[[1;36mDEBUG[m]   Included: com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0
+[[1;36mDEBUG[m]   Included: com.fasterxml.jackson.core:jackson-core:jar:2.8.4
+[[1;36mDEBUG[m]   Included: commons-codec:commons-codec:jar:1.10
+[[1;36mDEBUG[m]   Included: org.bouncycastle:bcprov-jdk15on:jar:1.55
+[[1;36mDEBUG[m]   Included: org.apache.commons:commons-text:jar:1.2
+[[1;36mDEBUG[m]   Included: org.apache.commons:commons-lang3:jar:3.7
+[[1;36mDEBUG[m] Configuring mojo com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc from plugin realm ClassRealm[plugin>com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[[1;36mDEBUG[m] Configuring mojo 'com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc' with basic configurator -->
+[[1;36mDEBUG[m]   (f) artifactId = products
+[[1;36mDEBUG[m]   (s) baseDirectory = /home/gsjurseth/git/geirs-superfly-istio-demo/apidocs
+[[1;36mDEBUG[m]   (f) buildDirectory = /home/gsjurseth/git/geirs-superfly-istio-demo/apidocs/target
+[[1;36mDEBUG[m]   (s) id = test
+[[1;36mDEBUG[m]   (s) options = create
+[[1;36mDEBUG[m]   (f) portalAPIDocFormat = basic_html
+[[1;36mDEBUG[m]   (f) portalDirectory = /home/gsjurseth/git/geirs-superfly-istio-demo/apidocs/specs
+[[1;36mDEBUG[m]   (f) portalFormat = yaml
+[[1;36mDEBUG[m]   (f) portalPassword = Cykl@m3n
+[[1;36mDEBUG[m]   (f) portalURL = https://dev-apidaysproducts.devportal.apigee.io
+[[1;36mDEBUG[m]   (f) portalUserName = gsjurseth+portaladmin@google.com
+[[1;36mDEBUG[m]   (f) projectName = products
+[[1;36mDEBUG[m]   (f) projectVersion = 1.0
+[[1;36mDEBUG[m]   (s) skip = false
+[[1;36mDEBUG[m] -- end configuration --
+[[1;34mINFO[m] ************************************************************************
+[[1;34mINFO[m] API Docs
+[[1;34mINFO[m] ************************************************************************
+[[1;36mDEBUG[m] Build option create
+[[1;34mINFO[m] Get OpenAPI Specs from /home/gsjurseth/git/geirs-superfly-istio-demo/apidocs/specs
+[[1;34mINFO[m] Getting API doc for Price microservice
+[[1;34mINFO[m] Retrieving Price microservice doc.
+[[1;31mERROR[m] 404 Not Found
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Page not found | apidaysportal</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Nbg3HZdIq_DCH39W95hbPC4a9CFX_XIgKgC7ioZ3fHU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" defer crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/v4-shims.js" defer crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_wayPZEI4-Tb2ZB4poIOLW6mFbVInalTGKrITtf5bfps.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body class="path--system-404 path-jsonapi">
+    <a href="#main-content" class="visually-hidden focusable skip-link btn btn-primary d-flex">Skip to main content</a>
+  
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+<div class="page">
+  
+
+
+<nav class="navbar navbar-expand-lg justify-content-between navbar- sticky-top ">
+      <div class="container">
+  
+                  
+  <div class="block block--apigee-kickstart-branding">
+
+  
+    
+
+    
+  <a href="/" class="navbar-brand d-flex align-items-center " aria-label="">
+            <img src="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/logo.svg" width="30" height="auto" alt="apidaysportal logo" class="mr-2" />
+
+        
+  </a>
+
+
+  </div>
+
+
+          
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+          </span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+                  <div class="mr-auto">
+            
+
+
+  <div class="block block--apigee-kickstart-main-menu">
+
+  
+            <h2 class="sr-only">Main navigation</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/apis" title="API Catalog" class="nav-link" data-drupal-link-system-path="apis">APIs</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/get-started" class="nav-link" data-drupal-link-system-path="node/2">Get Started</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/blog" class="nav-link" data-drupal-link-system-path="blog">Blog</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/forum" class="nav-link" data-drupal-link-system-path="forum">Forum</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/faq" class="nav-link" data-drupal-link-system-path="faq">FAQs</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+
+        </div>
+          
+                    
+
+
+  <div class="block block--apigee-kickstart-menu-account">
+
+  
+            <h2 class="sr-only">User account menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/user/login" class="nav-link" data-drupal-link-system-path="user/login">Log in</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/user/register" class="nav-link" data-drupal-link-system-path="user/register">Sign up</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="search-block-form block block--apigee-kickstart-search-form" data-drupal-selector="search-block-form" role="search">
+
+  
+    
+
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="form-inline">
+  <div class="js-form-item form-item js-form-type-search form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      
+          
+<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="20" maxlength="128" placeholder="Search" class="form-search form-control" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">  <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn btn-primary" />
+
+
+</div>
+
+</form>
+
+  
+  </div>
+
+
+            </div>
+
+      </div>
+  </nav>
+
+      <nav aria-label="breadcrumb" class="page__breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumb">
+            
+
+  <li class="block block--apigee-kickstart-breadcrumbs">
+
+  
+    
+
+        
+  </li>
+
+      <li class="breadcrumb-item ">
+              <a href="/">Home</a>
+          </li>
+  
+
+
+  <li class="block block--apigee-kickstart-breadcrumbs-title breadcrumb-item active">
+
+  
+    
+
+      Page not found
+  
+  </li>
+
+
+        </ol>
+      </div>
+    </nav>
+  
+      <header class="page__header">
+                      
+  <div class="block block--apigee-kickstart-title bg-lighter py-4">
+
+  
+    
+
+      <div class="container">
+      
+  <h1 class="page__title mb-0">Page not found</h1>
+
+
+    </div>
+  
+  </div>
+
+
+          </header>
+  
+    
+  
+  <main class="main" role="main">
+    <a id="main-content" tabindex="-1"></a>                  
+
+
+
+<div class="page-layout-sidebar-default">
+      <div class="container py-5">
+      <div class="row">
+                    
+                      <div class="page__content col-md">
+            <div data-drupal-messages-fallback class="hidden"></div>
+The requested page could not be found.
+
+
+        </div>
+      
+            
+  
+  
+      </div>
+    </div>
+
+  </div>
+            </main>
+
+  
+      <footer class="page__footer">
+              <div class="footer pt-5 pb-4 pb-md-8">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-between">
+                
+
+
+  <div class="block block--apigee-kickstart-menu-footer">
+
+  
+            <h2 class="sr-only">Footer menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav">
+                                          <li class="nav-item  ">
+                      <a href="/contact" class="nav-link" data-drupal-link-system-path="contact">Contact</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/terms-and-conditions" class="nav-link" data-drupal-link-system-path="node/3">Terms and Conditions</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="block block--basic block--apigee-kickstart-social">
+
+  
+    
+
+      
+
+            <div class="field field--hidden basic__body"><ul class="social-links">
+	<li><a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i> <span class="visually-hidden sr-only">YouTube</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-github fa-3x"></i> <span class="visually-hidden sr-only">Github</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-facebook fa-3x"></i> <span class="visually-hidden sr-only">Facebook</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-twitter-square fa-3x"></i> <span class="visuallyhidden sr-only">Twitter</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-linkedin fa-3x"></i> <span class="visuallyhidden sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+      
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+      
+              <div class="copyright py-1">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-end">
+                
+  <div class="block block--apigee-kickstart-drupal">
+
+  
+    
+
+      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+          </footer>
+  </div>
+
+  </div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"filter":{"name":"Price microservice"}}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"6702effc4b0fb37c04233d535d567838fc9493af7d2e7448b14fdd88de0bffe5"}}</script>
+<script src="/sites/default/files/js/js_SQw07iTEcdbvRXPuFPSIDzuBRwTcaPGsxCZl59L9KCI.js"></script>
+
+</body>
+</html>
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  9.572 s
+[[1;34mINFO[m] Finished at: 2020-09-01T14:18:56+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32mcom.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc[m [1m(smartdocs-deploy)[m on project [36mproducts[m: [1;31mExecution smartdocs-deploy of goal com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc failed: Update failure: 404 Not Found[m
+[[1;31mERROR[m] [1;31m<!DOCTYPE html>[m
+[[1;31mERROR[m] [1;31m<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">[m
+[[1;31mERROR[m] [1;31m  <head>[m
+[[1;31mERROR[m] [1;31m    <meta charset="utf-8" />[m
+[[1;31mERROR[m] [1;31m<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />[m
+[[1;31mERROR[m] [1;31m<meta name="MobileOptimized" content="width" />[m
+[[1;31mERROR[m] [1;31m<meta name="HandheldFriendly" content="true" />[m
+[[1;31mERROR[m] [1;31m<meta name="viewport" content="width=device-width, initial-scale=1.0" />[m
+[[1;31mERROR[m] [1;31m<link rel="shortcut icon" href="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/favicon.ico" type="image/vnd.microsoft.icon" />[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m    <title>Page not found | apidaysportal</title>[m
+[[1;31mERROR[m] [1;31m    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css" />[m
+[[1;31mERROR[m] [1;31m<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" />[m
+[[1;31mERROR[m] [1;31m<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Nbg3HZdIq_DCH39W95hbPC4a9CFX_XIgKgC7ioZ3fHU.css" />[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m<!--[if lte IE 8]>[m
+[[1;31mERROR[m] [1;31m<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>[m
+[[1;31mERROR[m] [1;31m<![endif]-->[m
+[[1;31mERROR[m] [1;31m<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" defer crossorigin="anonymous"></script>[m
+[[1;31mERROR[m] [1;31m<script src="https://use.fontawesome.com/releases/v5.13.1/js/v4-shims.js" defer crossorigin="anonymous"></script>[m
+[[1;31mERROR[m] [1;31m<script src="/sites/default/files/js/js_wayPZEI4-Tb2ZB4poIOLW6mFbVInalTGKrITtf5bfps.js"></script>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m    <meta http-equiv="X-UA-Compatible" content="IE=edge" />[m
+[[1;31mERROR[m] [1;31m  </head>[m
+[[1;31mERROR[m] [1;31m  <body class="path--system-404 path-jsonapi">[m
+[[1;31mERROR[m] [1;31m    <a href="#main-content" class="visually-hidden focusable skip-link btn btn-primary d-flex">Skip to main content</a>[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>[m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m<div class="page">[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m<nav class="navbar navbar-expand-lg justify-content-between navbar- sticky-top ">[m
+[[1;31mERROR[m] [1;31m      <div class="container">[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m                  [m
+[[1;31mERROR[m] [1;31m  <div class="block block--apigee-kickstart-branding">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m  <a href="/" class="navbar-brand d-flex align-items-center " aria-label="">[m
+[[1;31mERROR[m] [1;31m            <img src="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/logo.svg" width="30" height="auto" alt="apidaysportal logo" class="mr-2" />[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m        [m
+[[1;31mERROR[m] [1;31m  </a>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m          [m
+[[1;31mERROR[m] [1;31m  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">[m
+[[1;31mERROR[m] [1;31m    <span class="navbar-toggler-icon">[m
+[[1;31mERROR[m] [1;31m              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>[m
+[[1;31mERROR[m] [1;31m          </span>[m
+[[1;31mERROR[m] [1;31m  </button>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <div class="collapse navbar-collapse">[m
+[[1;31mERROR[m] [1;31m                  <div class="mr-auto">[m
+[[1;31mERROR[m] [1;31m            [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <div class="block block--apigee-kickstart-main-menu">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m            <h2 class="sr-only">Main navigation</h2>[m
+[[1;31mERROR[m] [1;31m        [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <ul class="nav navbar-nav">[m
+[[1;31mERROR[m] [1;31m                                          <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/apis" title="API Catalog" class="nav-link" data-drupal-link-system-path="apis">APIs</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m                                      <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/get-started" class="nav-link" data-drupal-link-system-path="node/2">Get Started</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m                                      <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/blog" class="nav-link" data-drupal-link-system-path="blog">Blog</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m                                      <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/forum" class="nav-link" data-drupal-link-system-path="forum">Forum</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m                                      <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/faq" class="nav-link" data-drupal-link-system-path="faq">FAQs</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m            </ul>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m        </div>[m
+[[1;31mERROR[m] [1;31m          [m
+[[1;31mERROR[m] [1;31m                    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <div class="block block--apigee-kickstart-menu-account">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m            <h2 class="sr-only">User account menu</h2>[m
+[[1;31mERROR[m] [1;31m        [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <ul class="nav navbar-nav">[m
+[[1;31mERROR[m] [1;31m                                          <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/user/login" class="nav-link" data-drupal-link-system-path="user/login">Log in</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m                                      <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/user/register" class="nav-link" data-drupal-link-system-path="user/register">Sign up</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m            </ul>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <div class="search-block-form block block--apigee-kickstart-search-form" data-drupal-selector="search-block-form" role="search">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="form-inline">[m
+[[1;31mERROR[m] [1;31m  <div class="js-form-item form-item js-form-type-search form-type-search form-item-keys js-form-item-keys form-no-label form-group">[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m          [m
+[[1;31mERROR[m] [1;31m<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="20" maxlength="128" placeholder="Search" class="form-search form-control" />[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m        </div>[m
+[[1;31mERROR[m] [1;31m<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">  <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn btn-primary" />[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m</div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m</form>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m            </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      </div>[m
+[[1;31mERROR[m] [1;31m  </nav>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      <nav aria-label="breadcrumb" class="page__breadcrumbs">[m
+[[1;31mERROR[m] [1;31m      <div class="container">[m
+[[1;31mERROR[m] [1;31m        <ol class="breadcrumb">[m
+[[1;31mERROR[m] [1;31m            [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <li class="block block--apigee-kickstart-breadcrumbs">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m        [m
+[[1;31mERROR[m] [1;31m  </li>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      <li class="breadcrumb-item ">[m
+[[1;31mERROR[m] [1;31m              <a href="/">Home</a>[m
+[[1;31mERROR[m] [1;31m          </li>[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <li class="block block--apigee-kickstart-breadcrumbs-title breadcrumb-item active">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      Page not found[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </li>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m        </ol>[m
+[[1;31mERROR[m] [1;31m      </div>[m
+[[1;31mERROR[m] [1;31m    </nav>[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m      <header class="page__header">[m
+[[1;31mERROR[m] [1;31m                      [m
+[[1;31mERROR[m] [1;31m  <div class="block block--apigee-kickstart-title bg-lighter py-4">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      <div class="container">[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m  <h1 class="page__title mb-0">Page not found</h1>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m    </div>[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m          </header>[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  <main class="main" role="main">[m
+[[1;31mERROR[m] [1;31m    <a id="main-content" tabindex="-1"></a>                  [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m<div class="page-layout-sidebar-default">[m
+[[1;31mERROR[m] [1;31m      <div class="container py-5">[m
+[[1;31mERROR[m] [1;31m      <div class="row">[m
+[[1;31mERROR[m] [1;31m                    [m
+[[1;31mERROR[m] [1;31m                      <div class="page__content col-md">[m
+[[1;31mERROR[m] [1;31m            <div data-drupal-messages-fallback class="hidden"></div>[m
+[[1;31mERROR[m] [1;31mThe requested page could not be found.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m        </div>[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m            [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m      </div>[m
+[[1;31mERROR[m] [1;31m    </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m            </main>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m      <footer class="page__footer">[m
+[[1;31mERROR[m] [1;31m              <div class="footer pt-5 pb-4 pb-md-8">[m
+[[1;31mERROR[m] [1;31m          <div class="container">[m
+[[1;31mERROR[m] [1;31m            <div class="d-md-flex justify-content-md-between">[m
+[[1;31mERROR[m] [1;31m                [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <div class="block block--apigee-kickstart-menu-footer">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m            <h2 class="sr-only">Footer menu</h2>[m
+[[1;31mERROR[m] [1;31m        [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <ul class="nav">[m
+[[1;31mERROR[m] [1;31m                                          <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/contact" class="nav-link" data-drupal-link-system-path="contact">Contact</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m                                      <li class="nav-item  ">[m
+[[1;31mERROR[m] [1;31m                      <a href="/terms-and-conditions" class="nav-link" data-drupal-link-system-path="node/3">Terms and Conditions</a>[m
+[[1;31mERROR[m] [1;31m                  </li>[m
+[[1;31mERROR[m] [1;31m            </ul>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  <div class="block block--basic block--apigee-kickstart-social">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m            <div class="field field--hidden basic__body"><ul class="social-links">[m
+[[1;31mERROR[m] [1;31m	<li><a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i> <span class="visually-hidden sr-only">YouTube</span></a></li>[m
+[[1;31mERROR[m] [1;31m	<li><a href="#" target="_blank"><i class="fab fa-github fa-3x"></i> <span class="visually-hidden sr-only">Github</span></a></li>[m
+[[1;31mERROR[m] [1;31m	<li><a href="#" target="_blank"><i class="fab fa-facebook fa-3x"></i> <span class="visually-hidden sr-only">Facebook</span></a></li>[m
+[[1;31mERROR[m] [1;31m	<li><a href="#" target="_blank"><i class="fab fa-twitter-square fa-3x"></i> <span class="visuallyhidden sr-only">Twitter</span></a></li>[m
+[[1;31mERROR[m] [1;31m	<li><a href="#" target="_blank"><i class="fab fa-linkedin fa-3x"></i> <span class="visuallyhidden sr-only">LinkedIn</span></a></li>[m
+[[1;31mERROR[m] [1;31m</ul>[m
+[[1;31mERROR[m] [1;31m</div>[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m            </div>[m
+[[1;31mERROR[m] [1;31m          </div>[m
+[[1;31mERROR[m] [1;31m        </div>[m
+[[1;31mERROR[m] [1;31m      [m
+[[1;31mERROR[m] [1;31m              <div class="copyright py-1">[m
+[[1;31mERROR[m] [1;31m          <div class="container">[m
+[[1;31mERROR[m] [1;31m            <div class="d-md-flex justify-content-md-end">[m
+[[1;31mERROR[m] [1;31m                [m
+[[1;31mERROR[m] [1;31m  <div class="block block--apigee-kickstart-drupal">[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m    [m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m            </div>[m
+[[1;31mERROR[m] [1;31m          </div>[m
+[[1;31mERROR[m] [1;31m        </div>[m
+[[1;31mERROR[m] [1;31m          </footer>[m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  </div>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m  [m
+[[1;31mERROR[m] [1;31m  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"filter":{"name":"Price microservice"}}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"6702effc4b0fb37c04233d535d567838fc9493af7d2e7448b14fdd88de0bffe5"}}</script>[m
+[[1;31mERROR[m] [1;31m<script src="/sites/default/files/js/js_SQw07iTEcdbvRXPuFPSIDzuBRwTcaPGsxCZl59L9KCI.js"></script>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31m</body>[m
+[[1;31mERROR[m] [1;31m</html>[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[1;31morg.apache.maven.lifecycle.LifecycleExecutionException[m: [1;31mFailed to execute goal [32mcom.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc[m [1m(smartdocs-deploy)[m on project [36mproducts[m: [1;31mExecution smartdocs-deploy of goal com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc failed: Update failure: 404 Not Found
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Page not found | apidaysportal</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Nbg3HZdIq_DCH39W95hbPC4a9CFX_XIgKgC7ioZ3fHU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" defer crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/v4-shims.js" defer crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_wayPZEI4-Tb2ZB4poIOLW6mFbVInalTGKrITtf5bfps.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body class="path--system-404 path-jsonapi">
+    <a href="#main-content" class="visually-hidden focusable skip-link btn btn-primary d-flex">Skip to main content</a>
+  
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+<div class="page">
+  
+
+
+<nav class="navbar navbar-expand-lg justify-content-between navbar- sticky-top ">
+      <div class="container">
+  
+                  
+  <div class="block block--apigee-kickstart-branding">
+
+  
+    
+
+    
+  <a href="/" class="navbar-brand d-flex align-items-center " aria-label="">
+            <img src="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/logo.svg" width="30" height="auto" alt="apidaysportal logo" class="mr-2" />
+
+        
+  </a>
+
+
+  </div>
+
+
+          
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+          </span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+                  <div class="mr-auto">
+            
+
+
+  <div class="block block--apigee-kickstart-main-menu">
+
+  
+            <h2 class="sr-only">Main navigation</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/apis" title="API Catalog" class="nav-link" data-drupal-link-system-path="apis">APIs</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/get-started" class="nav-link" data-drupal-link-system-path="node/2">Get Started</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/blog" class="nav-link" data-drupal-link-system-path="blog">Blog</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/forum" class="nav-link" data-drupal-link-system-path="forum">Forum</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/faq" class="nav-link" data-drupal-link-system-path="faq">FAQs</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+
+        </div>
+          
+                    
+
+
+  <div class="block block--apigee-kickstart-menu-account">
+
+  
+            <h2 class="sr-only">User account menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/user/login" class="nav-link" data-drupal-link-system-path="user/login">Log in</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/user/register" class="nav-link" data-drupal-link-system-path="user/register">Sign up</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="search-block-form block block--apigee-kickstart-search-form" data-drupal-selector="search-block-form" role="search">
+
+  
+    
+
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="form-inline">
+  <div class="js-form-item form-item js-form-type-search form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      
+          
+<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="20" maxlength="128" placeholder="Search" class="form-search form-control" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">  <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn btn-primary" />
+
+
+</div>
+
+</form>
+
+  
+  </div>
+
+
+            </div>
+
+      </div>
+  </nav>
+
+      <nav aria-label="breadcrumb" class="page__breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumb">
+            
+
+  <li class="block block--apigee-kickstart-breadcrumbs">
+
+  
+    
+
+        
+  </li>
+
+      <li class="breadcrumb-item ">
+              <a href="/">Home</a>
+          </li>
+  
+
+
+  <li class="block block--apigee-kickstart-breadcrumbs-title breadcrumb-item active">
+
+  
+    
+
+      Page not found
+  
+  </li>
+
+
+        </ol>
+      </div>
+    </nav>
+  
+      <header class="page__header">
+                      
+  <div class="block block--apigee-kickstart-title bg-lighter py-4">
+
+  
+    
+
+      <div class="container">
+      
+  <h1 class="page__title mb-0">Page not found</h1>
+
+
+    </div>
+  
+  </div>
+
+
+          </header>
+  
+    
+  
+  <main class="main" role="main">
+    <a id="main-content" tabindex="-1"></a>                  
+
+
+
+<div class="page-layout-sidebar-default">
+      <div class="container py-5">
+      <div class="row">
+                    
+                      <div class="page__content col-md">
+            <div data-drupal-messages-fallback class="hidden"></div>
+The requested page could not be found.
+
+
+        </div>
+      
+            
+  
+  
+      </div>
+    </div>
+
+  </div>
+            </main>
+
+  
+      <footer class="page__footer">
+              <div class="footer pt-5 pb-4 pb-md-8">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-between">
+                
+
+
+  <div class="block block--apigee-kickstart-menu-footer">
+
+  
+            <h2 class="sr-only">Footer menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav">
+                                          <li class="nav-item  ">
+                      <a href="/contact" class="nav-link" data-drupal-link-system-path="contact">Contact</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/terms-and-conditions" class="nav-link" data-drupal-link-system-path="node/3">Terms and Conditions</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="block block--basic block--apigee-kickstart-social">
+
+  
+    
+
+      
+
+            <div class="field field--hidden basic__body"><ul class="social-links">
+	<li><a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i> <span class="visually-hidden sr-only">YouTube</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-github fa-3x"></i> <span class="visually-hidden sr-only">Github</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-facebook fa-3x"></i> <span class="visually-hidden sr-only">Facebook</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-twitter-square fa-3x"></i> <span class="visuallyhidden sr-only">Twitter</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-linkedin fa-3x"></i> <span class="visuallyhidden sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+      
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+      
+              <div class="copyright py-1">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-end">
+                
+  <div class="block block--apigee-kickstart-drupal">
+
+  
+    
+
+      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+          </footer>
+  </div>
+
+  </div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"filter":{"name":"Price microservice"}}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"6702effc4b0fb37c04233d535d567838fc9493af7d2e7448b14fdd88de0bffe5"}}</script>
+<script src="/sites/default/files/js/js_SQw07iTEcdbvRXPuFPSIDzuBRwTcaPGsxCZl59L9KCI.js"></script>
+
+</body>
+</html>
+[m[m
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:215[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:156[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:117[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:81[m)
+    [1mat[m org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build ([1mSingleThreadedBuilder.java:56[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleStarter.execute ([1mLifecycleStarter.java:128[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:305[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:192[m)
+    [1mat[m org.apache.maven.DefaultMaven.execute ([1mDefaultMaven.java:105[m)
+    [1mat[m org.apache.maven.cli.MavenCli.execute ([1mMavenCli.java:956[m)
+    [1mat[m org.apache.maven.cli.MavenCli.doMain ([1mMavenCli.java:288[m)
+    [1mat[m org.apache.maven.cli.MavenCli.main ([1mMavenCli.java:192[m)
+    [1mat[m sun.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+    [1mat[m sun.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+    [1mat[m sun.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+    [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:498[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced ([1mLauncher.java:282[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launch ([1mLauncher.java:225[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode ([1mLauncher.java:406[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.main ([1mLauncher.java:347[m)
+[1mCaused by[m: org.apache.maven.plugin.PluginExecutionException: [1;31mExecution smartdocs-deploy of goal com.apigee.smartdocs.config:apigee-smartdocs-maven-plugin:2.0.1:apidoc failed: Update failure: 404 Not Found
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Page not found | apidaysportal</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Nbg3HZdIq_DCH39W95hbPC4a9CFX_XIgKgC7ioZ3fHU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" defer crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/v4-shims.js" defer crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_wayPZEI4-Tb2ZB4poIOLW6mFbVInalTGKrITtf5bfps.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body class="path--system-404 path-jsonapi">
+    <a href="#main-content" class="visually-hidden focusable skip-link btn btn-primary d-flex">Skip to main content</a>
+  
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+<div class="page">
+  
+
+
+<nav class="navbar navbar-expand-lg justify-content-between navbar- sticky-top ">
+      <div class="container">
+  
+                  
+  <div class="block block--apigee-kickstart-branding">
+
+  
+    
+
+    
+  <a href="/" class="navbar-brand d-flex align-items-center " aria-label="">
+            <img src="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/logo.svg" width="30" height="auto" alt="apidaysportal logo" class="mr-2" />
+
+        
+  </a>
+
+
+  </div>
+
+
+          
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+          </span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+                  <div class="mr-auto">
+            
+
+
+  <div class="block block--apigee-kickstart-main-menu">
+
+  
+            <h2 class="sr-only">Main navigation</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/apis" title="API Catalog" class="nav-link" data-drupal-link-system-path="apis">APIs</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/get-started" class="nav-link" data-drupal-link-system-path="node/2">Get Started</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/blog" class="nav-link" data-drupal-link-system-path="blog">Blog</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/forum" class="nav-link" data-drupal-link-system-path="forum">Forum</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/faq" class="nav-link" data-drupal-link-system-path="faq">FAQs</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+
+        </div>
+          
+                    
+
+
+  <div class="block block--apigee-kickstart-menu-account">
+
+  
+            <h2 class="sr-only">User account menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/user/login" class="nav-link" data-drupal-link-system-path="user/login">Log in</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/user/register" class="nav-link" data-drupal-link-system-path="user/register">Sign up</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="search-block-form block block--apigee-kickstart-search-form" data-drupal-selector="search-block-form" role="search">
+
+  
+    
+
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="form-inline">
+  <div class="js-form-item form-item js-form-type-search form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      
+          
+<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="20" maxlength="128" placeholder="Search" class="form-search form-control" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">  <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn btn-primary" />
+
+
+</div>
+
+</form>
+
+  
+  </div>
+
+
+            </div>
+
+      </div>
+  </nav>
+
+      <nav aria-label="breadcrumb" class="page__breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumb">
+            
+
+  <li class="block block--apigee-kickstart-breadcrumbs">
+
+  
+    
+
+        
+  </li>
+
+      <li class="breadcrumb-item ">
+              <a href="/">Home</a>
+          </li>
+  
+
+
+  <li class="block block--apigee-kickstart-breadcrumbs-title breadcrumb-item active">
+
+  
+    
+
+      Page not found
+  
+  </li>
+
+
+        </ol>
+      </div>
+    </nav>
+  
+      <header class="page__header">
+                      
+  <div class="block block--apigee-kickstart-title bg-lighter py-4">
+
+  
+    
+
+      <div class="container">
+      
+  <h1 class="page__title mb-0">Page not found</h1>
+
+
+    </div>
+  
+  </div>
+
+
+          </header>
+  
+    
+  
+  <main class="main" role="main">
+    <a id="main-content" tabindex="-1"></a>                  
+
+
+
+<div class="page-layout-sidebar-default">
+      <div class="container py-5">
+      <div class="row">
+                    
+                      <div class="page__content col-md">
+            <div data-drupal-messages-fallback class="hidden"></div>
+The requested page could not be found.
+
+
+        </div>
+      
+            
+  
+  
+      </div>
+    </div>
+
+  </div>
+            </main>
+
+  
+      <footer class="page__footer">
+              <div class="footer pt-5 pb-4 pb-md-8">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-between">
+                
+
+
+  <div class="block block--apigee-kickstart-menu-footer">
+
+  
+            <h2 class="sr-only">Footer menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav">
+                                          <li class="nav-item  ">
+                      <a href="/contact" class="nav-link" data-drupal-link-system-path="contact">Contact</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/terms-and-conditions" class="nav-link" data-drupal-link-system-path="node/3">Terms and Conditions</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="block block--basic block--apigee-kickstart-social">
+
+  
+    
+
+      
+
+            <div class="field field--hidden basic__body"><ul class="social-links">
+	<li><a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i> <span class="visually-hidden sr-only">YouTube</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-github fa-3x"></i> <span class="visually-hidden sr-only">Github</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-facebook fa-3x"></i> <span class="visually-hidden sr-only">Facebook</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-twitter-square fa-3x"></i> <span class="visuallyhidden sr-only">Twitter</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-linkedin fa-3x"></i> <span class="visuallyhidden sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+      
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+      
+              <div class="copyright py-1">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-end">
+                
+  <div class="block block--apigee-kickstart-drupal">
+
+  
+    
+
+      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+          </footer>
+  </div>
+
+  </div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"filter":{"name":"Price microservice"}}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"6702effc4b0fb37c04233d535d567838fc9493af7d2e7448b14fdd88de0bffe5"}}</script>
+<script src="/sites/default/files/js/js_SQw07iTEcdbvRXPuFPSIDzuBRwTcaPGsxCZl59L9KCI.js"></script>
+
+</body>
+</html>
+[m
+    [1mat[m org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo ([1mDefaultBuildPluginManager.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:210[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:156[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:117[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:81[m)
+    [1mat[m org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build ([1mSingleThreadedBuilder.java:56[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleStarter.execute ([1mLifecycleStarter.java:128[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:305[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:192[m)
+    [1mat[m org.apache.maven.DefaultMaven.execute ([1mDefaultMaven.java:105[m)
+    [1mat[m org.apache.maven.cli.MavenCli.execute ([1mMavenCli.java:956[m)
+    [1mat[m org.apache.maven.cli.MavenCli.doMain ([1mMavenCli.java:288[m)
+    [1mat[m org.apache.maven.cli.MavenCli.main ([1mMavenCli.java:192[m)
+    [1mat[m sun.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+    [1mat[m sun.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+    [1mat[m sun.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+    [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:498[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced ([1mLauncher.java:282[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launch ([1mLauncher.java:225[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode ([1mLauncher.java:406[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.main ([1mLauncher.java:347[m)
+[1mCaused by[m: java.lang.RuntimeException: [1;31mUpdate failure: 404 Not Found
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Page not found | apidaysportal</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_9m8-tA3IQf8ThlLQYTTZUyEweCvyR908Tg0XCbKYOfY.css" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Nbg3HZdIq_DCH39W95hbPC4a9CFX_XIgKgC7ioZ3fHU.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" defer crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.1/js/v4-shims.js" defer crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_wayPZEI4-Tb2ZB4poIOLW6mFbVInalTGKrITtf5bfps.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body class="path--system-404 path-jsonapi">
+    <a href="#main-content" class="visually-hidden focusable skip-link btn btn-primary d-flex">Skip to main content</a>
+  
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+<div class="page">
+  
+
+
+<nav class="navbar navbar-expand-lg justify-content-between navbar- sticky-top ">
+      <div class="container">
+  
+                  
+  <div class="block block--apigee-kickstart-branding">
+
+  
+    
+
+    
+  <a href="/" class="navbar-brand d-flex align-items-center " aria-label="">
+            <img src="/profiles/contrib/apigee_devportal_kickstart/themes/custom/apigee_kickstart/logo.svg" width="30" height="auto" alt="apidaysportal logo" class="mr-2" />
+
+        
+  </a>
+
+
+  </div>
+
+
+          
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+          </span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+                  <div class="mr-auto">
+            
+
+
+  <div class="block block--apigee-kickstart-main-menu">
+
+  
+            <h2 class="sr-only">Main navigation</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/apis" title="API Catalog" class="nav-link" data-drupal-link-system-path="apis">APIs</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/get-started" class="nav-link" data-drupal-link-system-path="node/2">Get Started</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/blog" class="nav-link" data-drupal-link-system-path="blog">Blog</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/forum" class="nav-link" data-drupal-link-system-path="forum">Forum</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/faq" class="nav-link" data-drupal-link-system-path="faq">FAQs</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+
+        </div>
+          
+                    
+
+
+  <div class="block block--apigee-kickstart-menu-account">
+
+  
+            <h2 class="sr-only">User account menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav navbar-nav">
+                                          <li class="nav-item  ">
+                      <a href="/user/login" class="nav-link" data-drupal-link-system-path="user/login">Log in</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/user/register" class="nav-link" data-drupal-link-system-path="user/register">Sign up</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="search-block-form block block--apigee-kickstart-search-form" data-drupal-selector="search-block-form" role="search">
+
+  
+    
+
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="form-inline">
+  <div class="js-form-item form-item js-form-type-search form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      
+          
+<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="20" maxlength="128" placeholder="Search" class="form-search form-control" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">  <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn btn-primary" />
+
+
+</div>
+
+</form>
+
+  
+  </div>
+
+
+            </div>
+
+      </div>
+  </nav>
+
+      <nav aria-label="breadcrumb" class="page__breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumb">
+            
+
+  <li class="block block--apigee-kickstart-breadcrumbs">
+
+  
+    
+
+        
+  </li>
+
+      <li class="breadcrumb-item ">
+              <a href="/">Home</a>
+          </li>
+  
+
+
+  <li class="block block--apigee-kickstart-breadcrumbs-title breadcrumb-item active">
+
+  
+    
+
+      Page not found
+  
+  </li>
+
+
+        </ol>
+      </div>
+    </nav>
+  
+      <header class="page__header">
+                      
+  <div class="block block--apigee-kickstart-title bg-lighter py-4">
+
+  
+    
+
+      <div class="container">
+      
+  <h1 class="page__title mb-0">Page not found</h1>
+
+
+    </div>
+  
+  </div>
+
+
+          </header>
+  
+    
+  
+  <main class="main" role="main">
+    <a id="main-content" tabindex="-1"></a>                  
+
+
+
+<div class="page-layout-sidebar-default">
+      <div class="container py-5">
+      <div class="row">
+                    
+                      <div class="page__content col-md">
+            <div data-drupal-messages-fallback class="hidden"></div>
+The requested page could not be found.
+
+
+        </div>
+      
+            
+  
+  
+      </div>
+    </div>
+
+  </div>
+            </main>
+
+  
+      <footer class="page__footer">
+              <div class="footer pt-5 pb-4 pb-md-8">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-between">
+                
+
+
+  <div class="block block--apigee-kickstart-menu-footer">
+
+  
+            <h2 class="sr-only">Footer menu</h2>
+        
+
+      
+  
+
+
+  <ul class="nav">
+                                          <li class="nav-item  ">
+                      <a href="/contact" class="nav-link" data-drupal-link-system-path="contact">Contact</a>
+                  </li>
+                                      <li class="nav-item  ">
+                      <a href="/terms-and-conditions" class="nav-link" data-drupal-link-system-path="node/3">Terms and Conditions</a>
+                  </li>
+            </ul>
+
+
+  
+  </div>
+
+  <div class="block block--basic block--apigee-kickstart-social">
+
+  
+    
+
+      
+
+            <div class="field field--hidden basic__body"><ul class="social-links">
+	<li><a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i> <span class="visually-hidden sr-only">YouTube</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-github fa-3x"></i> <span class="visually-hidden sr-only">Github</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-facebook fa-3x"></i> <span class="visually-hidden sr-only">Facebook</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-twitter-square fa-3x"></i> <span class="visuallyhidden sr-only">Twitter</span></a></li>
+	<li><a href="#" target="_blank"><i class="fab fa-linkedin fa-3x"></i> <span class="visuallyhidden sr-only">LinkedIn</span></a></li>
+</ul>
+</div>
+      
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+      
+              <div class="copyright py-1">
+          <div class="container">
+            <div class="d-md-flex justify-content-md-end">
+                
+  <div class="block block--apigee-kickstart-drupal">
+
+  
+    
+
+      <span>Powered by <a href="https://www.drupal.org">Drupal</a></span>
+  
+  </div>
+
+
+            </div>
+          </div>
+        </div>
+          </footer>
+  </div>
+
+  </div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"filter":{"name":"Price microservice"}}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"6702effc4b0fb37c04233d535d567838fc9493af7d2e7448b14fdd88de0bffe5"}}</script>
+<script src="/sites/default/files/js/js_SQw07iTEcdbvRXPuFPSIDzuBRwTcaPGsxCZl59L9KCI.js"></script>
+
+</body>
+</html>
+[m
+    [1mat[m com.apigee.smartdocs.config.mavenplugin.APIDocsMojo.doUpdate ([1mAPIDocsMojo.java:166[m)
+    [1mat[m com.apigee.smartdocs.config.mavenplugin.APIDocsMojo.execute ([1mAPIDocsMojo.java:135[m)
+    [1mat[m org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo ([1mDefaultBuildPluginManager.java:137[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:210[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:156[m)
+    [1mat[m org.apache.maven.lifecycle.internal.MojoExecutor.execute ([1mMojoExecutor.java:148[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:117[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject ([1mLifecycleModuleBuilder.java:81[m)
+    [1mat[m org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build ([1mSingleThreadedBuilder.java:56[m)
+    [1mat[m org.apache.maven.lifecycle.internal.LifecycleStarter.execute ([1mLifecycleStarter.java:128[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:305[m)
+    [1mat[m org.apache.maven.DefaultMaven.doExecute ([1mDefaultMaven.java:192[m)
+    [1mat[m org.apache.maven.DefaultMaven.execute ([1mDefaultMaven.java:105[m)
+    [1mat[m org.apache.maven.cli.MavenCli.execute ([1mMavenCli.java:956[m)
+    [1mat[m org.apache.maven.cli.MavenCli.doMain ([1mMavenCli.java:288[m)
+    [1mat[m org.apache.maven.cli.MavenCli.main ([1mMavenCli.java:192[m)
+    [1mat[m sun.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+    [1mat[m sun.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+    [1mat[m sun.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+    [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:498[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced ([1mLauncher.java:282[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.launch ([1mLauncher.java:225[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode ([1mLauncher.java:406[m)
+    [1mat[m org.codehaus.plexus.classworlds.launcher.Launcher.main ([1mLauncher.java:347[m)
+[[1;31mERROR[m] 
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException

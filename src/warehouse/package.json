@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^1.7.0",
+    "@babel/preset-env": "^7.10.0",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "sinon": "^7.3.2"

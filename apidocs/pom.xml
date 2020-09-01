@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>parent-pom</artifactId>
+		<groupId>apigee</groupId>
+		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>apigee</groupId>
+	<artifactId>products</artifactId>
+	<version>1.0</version>
+	<name>products</name>
+	<packaging>pom</packaging>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>https://repo1.maven.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>	
+
+    <profiles>
+      <profile>
+        <id>test</id>
+        <properties>
+          <portal.url>https://dev-apidaysproducts.devportal.apigee.io/</portal.url><!-- URL of the developer portal. --> 
+          <portal.username>gsjurseth+portaladmin@google.com</portal.username><!-- Username for the developer portal. -->
+          <portal.password>${ppassword}</portal.password><!-- Password for the developer portal. -->
+          <portal.format>yaml</portal.format><!-- Format of the OpenAPI specs. -->
+          <portal.api.doc.format>basic_html</portal.api.doc.format><!-- Format in the portal. Values: basic_html, restricted_html, full_html -->
+          <portal.directory>${basedir}/specs</portal.directory><!-- Directory where OpenAPI specs are accessible. -->
+        </properties>
+      </profile>
+    </profiles>
+    <build>
+        <plugins>
+          <plugin>
+            <groupId>com.apigee.smartdocs.config</groupId>
+            <artifactId>apigee-smartdocs-maven-plugin</artifactId>
+            <version>2.0.1</version>
+            <executions>
+                <execution>
+                    <id>smartdocs-deploy</id>
+                    <phase>install</phase>
+                    <goals>
+                        <goal>apidoc</goal>
+                    </goals>
+                </execution>
+            </executions>
+          </plugin>
+        </plugins>
+    </build>
+</project>

@@ -21,15 +21,18 @@ spec:
   selector:
     matchLabels:
       app: warehouse-client-api-service
+      version: v1
   template:
     metadata:
       labels:
         app: warehouse-client-api-service
+        version: v1
+        managed-by: apigee
     spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: eu.gcr.io/apigee-trashcan-backends/warehouse-client-api:3
+        image: eu.gcr.io/geirs-purdy-project/warehouse-client:1
         ports:
         - containerPort: 3333
         readinessProbe:

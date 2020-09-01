@@ -1,0 +1,16 @@
+[
+    {
+        "attributes": [],
+        "email": "gsjurseth+internal-mesh@google.com",
+        "firstName": "Geir",
+        "lastName": "InternalSjurseth",
+        "userName": "gsjurseth-internal-mesh"
+    },
+    {
+        "attributes": [],
+        "email": "gsjurseth+external-mesh@google.com",
+        "firstName": "Geir",
+        "lastName": "ExternalSjurseth",
+        "userName": "gsjurseth-external-mesh"
+    }
+]

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="products">
+    <Basepaths>/v1/products</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1598349025070</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>products</DisplayName>
+    <LastModifiedAt>1598349025070</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:0c19036b50f27197d04501660e855cf145b16f7086ea2139b3f085641068a011d4b5e85fd6972558382e42e62bd1446c49214353628f98bac07a7ef8f2c3bac8</ManifestVersion>
+    <Policies>
+        <Policy>AssignMessageaddAuthHeader</Policy>
+        <Policy>AssignMessagesetPayload</Policy>
+        <Policy>RaiseFaultdenyAccess</Policy>
+        <Policy>SC.fetchInStock</Policy>
+        <Policy>SC.fetchPrices</Policy>
+        <Policy>VerifyAPIKey</Policy>
+        <Policy>parseAndCreateResponse</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://parseAndCreateResponse.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
