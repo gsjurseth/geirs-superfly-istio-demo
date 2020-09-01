@@ -59,5 +59,7 @@
       <module>products-proxy</module>
       <module>catalog-proxy</module>
       <module>apigee-config</module>
+      <module>apidocs</module>
+      <module>patterns</module>
     </modules>
 </project>
