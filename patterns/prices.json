@@ -1,14 +1,31 @@
 {
   "GetPrices": {
     "$http": {
-      "url": " http://35.228.61.228/price",
+      "url": " https://devapi.evils.in/price",
       "requestSignature": "a8eExFhx4TAjnpwsbYeX/w==:11xnpmRfgP27HgURoPGzh2lZ9fSTPmfaVl50Tfn4DRanIgAZIMg+DWC02Td/pyJrewJM2sCKJiaDQ9/EHOui7g==",
       "headers": {
-        "x-api-key": "QGNsdj5YBBSC1NhxnPwQL3raoEp0opkT"
+        "x-api-key": "ojMEr0YQBkueB0AwdrEHGk9EqvyXTSTT"
       }
     }
   },
   "Display_prices": {
     "$ref": "GetPrices.$table(\"Name|Price\",body.name,body.price)"
-  }
+  },
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Prices",
+      "description": "Interface for prices service"
+    }
+  },
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Prices",
+      "description": "Interface for prices service"
+    },
+    "cells": [
+      { "id": "GetPrices" },
+      { "id": "Display_prices", "meta": { "description": "prices", "searchable": true } }
+  ]}
 }

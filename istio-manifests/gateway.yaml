@@ -3,7 +3,10 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: gateway
-  namespace: default
+  namespace: istio-system
+  annotations:
+    kubernetes.io/ingres.class: istio
+    cert-manager.io/issuer: "letsencrypt-staging"
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -14,6 +17,17 @@ spec:
       protocol: HTTP
     hosts:
     - "*"
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: test-certificate
+      #      privateKey: sds
+      #serverCertificate: sds
+    hosts:
+      - "devapi.evils.in"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -24,8 +38,16 @@ spec:
   hosts:
   - "*"
   gateways:
-  - default/gateway
+  - istio-system/gateway
   http:
+    #  - match:
+    #- uri:
+    #    prefix: "/"
+    #route:
+    #- destination:
+    #    host: kuard
+    #    port:
+    #      number: 80
   - match:
     - uri:
         prefix: "/md"

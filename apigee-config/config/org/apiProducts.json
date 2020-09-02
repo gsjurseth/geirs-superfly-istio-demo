@@ -34,7 +34,7 @@
       }, 
       {
       "name" : "apigee-remote-service-targets",
-      "value" : "35.228.61.228,warehouse-client-api-service.myservices.svc.cluster.local:3333"
+      "value" : "devapi.evils.in,35.228.61.228,warehouse-client-api-service.myservices.svc.cluster.local:3333"
     }],
     "createdAt" : 1593088124343,
     "createdBy" : "gsjurseth@google.com",
@@ -45,7 +45,7 @@
     "lastModifiedBy" : "gsjurseth@google.com",
     "name" : "External-Mesh-APIs",
     "proxies" : [ "remote-service"  ],
-    "quota" : "5",
+    "quota" : "20",
     "quotaInterval" : "1",
     "quotaTimeUnit" : "minute",
     "scopes" : [ ]

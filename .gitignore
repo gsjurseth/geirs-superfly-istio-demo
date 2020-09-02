@@ -64,3 +64,5 @@ typings/
 updateCookie.sh
 package-lock.json
 yarn.json
+
+certs

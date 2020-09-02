@@ -1,14 +1,31 @@
 {
   "GetStock": {
     "$http": {
-      "url": " http://35.228.61.228/warehouse",
+      "url": " https://devapi.evils.in/warehouse",
       "requestSignature": "a8eExFhx4TAjnpwsbYeX/w==:11xnpmRfgP27HgURoPGzh2lZ9fSTPmfaVl50Tfn4DRanIgAZIMg+DWC02Td/pyJrewJM2sCKJiaDQ9/EHOui7g==",
       "headers": {
-        "x-api-key": "QGNsdj5YBBSC1NhxnPwQL3raoEp0opkT"
+        "x-api-key": "ojMEr0YQBkueB0AwdrEHGk9EqvyXTSTT"
       }
     }
   },
-  "Display_prices": {
+  "Display_stock": {
     "$ref": "GetStock.$table(\"Name|Amount\",body.name,body.number)"
-  }
+  },
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Warehouse",
+      "description": "Interface for warehouse service"
+    }
+  },
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Warehouse",
+      "description": "Interface for warehouse service"
+    },
+    "cells": [
+      { "id": "GetStock" },
+      { "id": "Display_stock", "meta": { "description": "warehouse", "searchable": true } }
+  ]}
 }

@@ -4,10 +4,8 @@ info:
   title: Price microservice
   description: |
     Price microservice
-
-# Servers where this API is hosted
 servers: 
-  - url: http://35.228.61.228/
+  - url: https://devapi.evils.in/
 security:
   - ApiKeyAuth: []  
 paths:

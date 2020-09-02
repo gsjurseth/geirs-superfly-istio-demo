@@ -1,14 +1,29 @@
 {
   "GetMasterdata": {
     "$http": {
-      "url": " http://35.228.61.228/md",
+      "url": " https://devapi.evils.in/md",
       "requestSignature": "a8eExFhx4TAjnpwsbYeX/w==:11xnpmRfgP27HgURoPGzh2lZ9fSTPmfaVl50Tfn4DRanIgAZIMg+DWC02Td/pyJrewJM2sCKJiaDQ9/EHOui7g==",
       "headers": {
-        "x-api-key": "QGNsdj5YBBSC1NhxnPwQL3raoEp0opkT"
+        "x-api-key": "ojMEr0YQBkueB0AwdrEHGk9EqvyXTSTT"
       }
     }
   },
-  "Display_prices": {
-    "$ref": "GetMasterdata.$table(\"Name|Description|Image\",body.name,body.desc,body.imgUrl)"
-  }
+  "Display_masterdata": "<table width=\"600\" cellspacing=\"0\" cellpadding=\"0\"  bgcolor=\"#eeeeee\">\n  <tr>\n    <td style='min-width:100px'><h5><b>Reg #</td>\n    <td style='min-width:200px'><h5><b>Product Name</td>\n    <td style='min-width:280px'><h5><b>Company</td>\n  </tr>\n  {{GetMasterdata.$join($map(body, function($v) {\"<tr><td>\"&$v.name&\"</td><td>\"&$v.desc&\"</td><td><img src='\"&$v.imgUrl&\"'</td></tr>\"}))}}\n  </table>",
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Masterdata",
+      "description": "Interface for masterdata service"
+    }
+  },
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Masterdata",
+      "description": "Interface for masterdata service"
+    },
+    "cells": [
+      { "id": "GetMasterdata" },
+      { "id": "Display_masterdata", "meta": { "description": "masterdata", "searchable": true } }
+  ]}
 }

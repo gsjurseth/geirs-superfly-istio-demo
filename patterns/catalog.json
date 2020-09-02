@@ -1,0 +1,29 @@
+{
+  "GetCatalog": {
+    "$http": {
+      "url": "https://emea-poc15-test.apigee.net/v1/catalog",
+      "requestSignature": "a8eExFhx4TAjnpwsbYeX/w==:11xnpmRfgP27HgURoPGzh2lZ9fSTPmfaVl50Tfn4DRanIgAZIMg+DWC02Td/pyJrewJM2sCKJiaDQ9/EHOui7g==",
+      "headers": {
+        "apikey": "m1TPwIAyYWxRPloeOzD0Ol6u59yxZQab"
+      }
+    }
+  },
+  "Display_Catalog": "<table width=\"600\" cellspacing=\"0\" cellpadding=\"0\"  bgcolor=\"#eeeeee\">\n  <tr>\n    <td style='min-width:100px'><h5><b>Item Name</td>\n    <td style='min-width:200px'><h5><b>Amount</td>\n    <td style='min-width:280px'><h5><b>Price</td>\n <td style='min-width:280px'><h5><b>Image</td>\n  </tr>\n  {{GetCatalog.$join($map(body, function($v) {\"<tr><td>\"&$v.name&\"</td><td>\"&$v.amount&\"</td><td>\"&$v.price&\"</td><td><img src='\"&$v.imgUrl&\"'</td></tr>\"}))}}\n  </table>",
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Catalog",
+      "description": "Interface for the product catalog"
+    }
+  },
+  "__meta": {
+    "info": {
+      "author": "gsjurseth",
+      "title": "Catalog",
+      "description": "Interface for the product catalog"
+    },
+    "cells": [
+      { "id": "GetCatalog" },
+      { "id": "Display_Catalog", "meta": { "description": "catalog", "searchable": true } }
+  ]}
+}

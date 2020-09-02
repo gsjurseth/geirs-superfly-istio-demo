@@ -1,20 +1,19 @@
 openapi: 3.0.3
 info:
   version: 0.0.1
-  title: Masterdata microservice
+  title: Catalog Service
   description: |
-    Masterdata microservice
+    For fetching a render ready catalog
 servers: 
-  - url: https://devapi.evils.in/
+  - url: https://emea-poc15-test.apigee.net/v1
 security:
   - ApiKeyAuth: []  
 paths:
-  '/md':
+  '/catalog':
     get:
-      summary: 'List `Masterdata` objects.'
+      summary: 'List `warehouse` objects.'
       description: |
-        Fetches list of masterdata of all items we carry
-      # This is an array of GET operation parameters:
+        Fetches list of warehouses of all items we carry
       responses:
         '200':
           description: Successful response
@@ -26,30 +25,22 @@ paths:
                   persons:
                     type: array
                     items:
-                      $ref: '#/components/schemas/ListOfMasterdata'
+                      $ref: '#/components/schemas/ListOfItems'
                   nextPageToken:
                     description: |
                       A token which can be sent as `pageToken`
                       to retrieve the next page.
                     type: string
-  '/md/{name}':
+  '/products':
     get:
-      description: 'Retrieve a single Person object.'
-      parameters:
-        - name: name
-          in: path
-          description: |
-            Unique identifier of the desired person object.
-          required: true
-          schema:
-            type: string
+      description: 'Retrieve products without pricing'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Masterdata'
+                $ref: '#/components/schemas/ListOfItems'
         '404':
           description: 'Item was not found'
 components:
@@ -57,29 +48,34 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: header
-      name: X-API-KEY
+      name: apikey
   schemas:
-    ListOfMasterdata:
-      title: List of Masterdata
+    ListOfItems:
+      title: List of warehouses
       type: array
       items:
-        $ref: '#/components/schemas/Masterdata'
-    Masterdata:
-      title: Masterdata
+        $ref: '#/components/schemas/Item'
+    Item:
+      title: Item
       type: object
       properties:
         name:
           description: |
             name of the item
-            Format: `persons/{personId}`
+            Format: `catalog/{itemId}`
           type: string
-          example: "md/a353-x51d"
-          pattern: 'md\/[a-z0-9-]+'
+        number:
+          description: 'warehouse stock of an item'
+          type: integer
+          example: "123"
+        price:
+          description: 'warehouse stock of an item'
+          type: number
         desc:
-          description: 'the description of the item'
+          description: 'description from masterdata'
           type: string
         imgUrl:
-          description: 'the url to the image'
+          description: 'Url for an image of the item'
           type: string
         id:
           description: 'uuid of the item in question (internal only)'

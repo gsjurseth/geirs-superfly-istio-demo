@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="6" name="products">
+<APIProxy revision="1" name="catalog">
     <Basepaths>/v1/products</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1554793883312</CreatedAt>
-    <CreatedBy>defaultUser</CreatedBy>
+    <CreatedAt>1598867759428</CreatedAt>
+    <CreatedBy>gsjurseth@google.com</CreatedBy>
     <Description></Description>
     <DisplayName>products</DisplayName>
-    <LastModifiedAt>1599034430911</LastModifiedAt>
+    <LastModifiedAt>1599034360058</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
-    <ManifestVersion>SHA-512:b9615cd530777204efbb58813d7f38a255e395d0753b31174eb3cc577e3196afcc78ffa08e28000cdbd6fd144183e0253c14f9ac1adc464c88c42f1aae07a319</ManifestVersion>
+    <ManifestVersion>SHA-512:94d85edf829f077d4c71ec3c4b875d6cd83500fe831d822836a6150455147935ff094c31fdf49ebc9012e0725505f3485a3691cde2bbb7fae0392e864aad4d97</ManifestVersion>
     <Policies>
         <Policy>AddCors</Policy>
         <Policy>AssignMessageaddAuthHeader</Policy>

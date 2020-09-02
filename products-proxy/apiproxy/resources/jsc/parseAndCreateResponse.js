@@ -3,7 +3,7 @@ var pFirst = JSON.parse(first);
 
 //var second = context.getVariable('priceResponse.content');
 var third = context.getVariable('warehouseResponse.content');
-var pSecond = JSON.parse(second);
+//var pSecond = JSON.parse(second);
 var pThird = JSON.parse(third);
 
 var newHash = {};
