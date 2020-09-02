@@ -25,6 +25,9 @@
             <Step>
                 <Name>AssignMessagesetPayload</Name>
             </Step>
+            <Step>
+                <Name>Response-Cache-1</Name>
+            </Step>
         </Response>
     </PostFlow>
     <Flows/>

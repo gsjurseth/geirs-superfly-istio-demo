@@ -6,14 +6,15 @@
     <CreatedBy>gsjurseth@google.com</CreatedBy>
     <Description></Description>
     <DisplayName>products</DisplayName>
-    <LastModifiedAt>1599034360058</LastModifiedAt>
+    <LastModifiedAt>1599036676193</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
-    <ManifestVersion>SHA-512:94d85edf829f077d4c71ec3c4b875d6cd83500fe831d822836a6150455147935ff094c31fdf49ebc9012e0725505f3485a3691cde2bbb7fae0392e864aad4d97</ManifestVersion>
+    <ManifestVersion>SHA-512:98217f0204a2dc1f49d74513c31e4e0572bd64b7f740676d3e8b124603f927368c4db4ad848759f077f78f300eb40015c31d43d6286d7cb8a94283561ed8e41b</ManifestVersion>
     <Policies>
         <Policy>AddCors</Policy>
         <Policy>AssignMessageaddAuthHeader</Policy>
         <Policy>AssignMessagesetPayload</Policy>
         <Policy>RaiseFaultdenyAccess</Policy>
+        <Policy>Response-Cache-1</Policy>
         <Policy>SC.fetchInStock</Policy>
         <Policy>SC.fetchPrices</Policy>
         <Policy>ServiceCalloutfetchPrices</Policy>
