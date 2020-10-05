@@ -5,10 +5,32 @@
       <Step>
         <Name>AM.setAuthHeader</Name>
       </Step>
-    </Request>
-    <Response/>
+      <Step>
+          <Name>VerifyAPIKey</Name>
+          <Condition>(request.verb != "OPTIONS")</Condition>
+      </Step>
+      <Step>
+          <Name>Response-Cache-1</Name>
+      </Step>
+  </Request>
+  <Response>
+      <Step>
+          <Name>AddCors</Name>
+      </Step>
+  </Response>
   </PreFlow>
-  <Flows/>
+  <Flows>
+      <Flow name="deny">
+          <Description/>
+          <Request>
+              <Step>
+                  <Name>RaiseFaultdenyAccess</Name>
+              </Step>
+          </Request>
+          <Response/>
+          <Condition>(request.verb = "POST") or (request.verb = "PUT") or (request.verb = "DELETE")</Condition>
+      </Flow>
+  </Flows>
   <PostFlow name="PostFlow">
     <Request/>
     <Response/>
@@ -17,6 +39,9 @@
     <BasePath>/v2/catalog</BasePath>
     <VirtualHost>secure</VirtualHost>
   </HTTPProxyConnection>
+  <RouteRule name="NOROUTE">
+      <Condition>(request.verb == "OPTIONS")</Condition>
+  </RouteRule>
   <RouteRule name="default">
     <TargetEndpoint>default</TargetEndpoint>
   </RouteRule>

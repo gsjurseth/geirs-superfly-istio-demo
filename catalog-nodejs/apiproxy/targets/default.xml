@@ -7,8 +7,12 @@
     </PreFlow>
     <Flows/>
     <PostFlow name="PostFlow">
-        <Request/>
-        <Response/>
+      <Request/>
+      <Response>
+          <Step>
+              <Name>Response-Cache-1</Name>
+          </Step>
+        </Response>
     </PostFlow>
     <HostedTarget/>
 </TargetEndpoint>
