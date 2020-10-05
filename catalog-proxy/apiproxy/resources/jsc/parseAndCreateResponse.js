@@ -11,7 +11,10 @@ var newHash = {};
 for ( var i in pFirst) {
     var name = pFirst[i].name;
     print('working on name: ', name);
-    newHash[ name ] = { 'imgUrl': pFirst[i].imgUrl };
+    newHash[ name ] = { 'imgUrl': pFirst[i].imgUrl,
+      'desc': pFirst[i].desc,
+      'name': pFirst[i].name 
+    };
 }
 
 for ( var i in pSecond) {
