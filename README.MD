@@ -22,7 +22,11 @@ Service that spits back warehouse availability keyed off the name
 Service this one is an aggregating service ostensibly used to enable the development of client that simply updates warehouse stock information.
 
 ## The APIS
-Firstly, all the ones listed above, but additionally we have have price-catalog-api published as a pure apigee service
+Firstly, all the ones listed above, but additionally we have have price-catalog-api published as a pure apigee service. And for good measure there's 
+product api as well that duplicates the catalog but without pricing information.
+
+## Documentation and Patterns
+APIdocs contains documentation for the developer portal. Also included in the patterns directory which contains automated deployment of patterns to SignalPattern.
 
 ## Dependendencies and Setup
 This whole project is using mongodb as its backend. Why? Because I talked about it a lot and had worked with other document dbs but never with mongo and that was simply unacceptable. Moreover, using mongo instead of managed service in some cloud means that this will run anywhere ... I'm not promoting the use of mongo in k8s over a managed service, but it makes this demo simple and completely contained.
