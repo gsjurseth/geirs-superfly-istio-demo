@@ -50,6 +50,14 @@ spec:
     #      number: 80
   - match:
     - uri:
+        prefix: "/locations"
+    route:
+    - destination:
+        host: locationsservice
+        port:
+          number: 3000
+  - match:
+    - uri:
         prefix: "/md"
     route:
     - destination:
