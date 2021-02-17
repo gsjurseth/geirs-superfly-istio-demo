@@ -27,6 +27,6 @@
     <Flows/>
     <HTTPTargetConnection>
         <Properties/>
-        <URL>http://35.228.61.228/md</URL>
+        <URL>https://devapi.evils.in/md</URL>
     </HTTPTargetConnection>
 </TargetEndpoint>

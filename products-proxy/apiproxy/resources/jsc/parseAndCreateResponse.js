@@ -14,9 +14,11 @@ for ( var i in pFirst) {
     newHash[ id ] = { 'imgUrl': pFirst[i].imgUrl };
 }
 
+/*
 for ( var i in pSecond) {
     newHash[ pSecond[i]._id ].price = pSecond[i].price;
 }
+*/
 
 for ( var i in pThird) {
     newHash[ pThird[i]._id ].amount = pThird[i].number;

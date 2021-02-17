@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest name="manifest">
     <Policies>
-        <VersionInfo resourceName="AssignMessageaddAuthHeader" version="SHA-512:8e84c5fea13a00dc48da95d6bfe2e699cbe3747c0f067a474c7046e7d4caf4003ec6fd31ac43a8bfef18bd9c76cc503082b8e0de5387890c1b7b04c3d9726919"/>
+        <VersionInfo resourceName="AddCors" version="SHA-512:8cb6c2bb0d974e02d38e455940015e5241c23fca8c2d63890410c994eda3c1774b0e2da7dce09a476d366391f59df59f6e04022e2d8f2b24d161dcfef3ed4463"/>
+        <VersionInfo resourceName="AssignMessageaddAuthHeader" version="SHA-512:0bd3ac5ba8fbca0946677f1e09db1877b0d24dfe6178fe1579d46e9f9ba5015943d91ff3fee1adbea66431c39fd5bc6bc0af15ed2c7b50ce7062d6a95d030c22"/>
         <VersionInfo resourceName="AssignMessagesetPayload" version="SHA-512:875347b6348c5dbd58d32959fd2bdcca6385d93c4fae507b56487cf98b405f8dd8ca2dbcf50445b24ff9c05932045b7c27787aaf7bf44926557cb2a1b7b14062"/>
         <VersionInfo resourceName="RaiseFaultdenyAccess" version="SHA-512:0bf645b0b3290381b81b2f2faa49964e71833226972dc60978803abdcfe9df0b125b0276d6a6d4b6b9ebe0a0a6e468263fcee83cd1e474880da331fe38963135"/>
-        <VersionInfo resourceName="SC.fetchInStock" version="SHA-512:414652f352f2f5a7388b5ad343d8b714d7df6f93ac70513aefd7428cb47513ac15255a63a82790c15d6982d1e0b69192c2bf25e465760ec431d90247bd0664d0"/>
+        <VersionInfo resourceName="SC.fetchInStock" version="SHA-512:3067fae4370ae49b7f9d4a84ffa17c89f8e773965d88f950567dcf4edd2d70d3508bdcc60bc679585cff20c7e2048c8478f5b7a6e97c30b7772cc1228b4b1eaf"/>
         <VersionInfo resourceName="SC.fetchPrices" version="SHA-512:265760c18e8c6ce07c359f8f5e1e2949b70b477cf0c8ec650f8cacfa77c70f5c18a41af3aafe771546ef5212a77dd591ae48966fa27f1ca77cf76eba784a501d"/>
+        <VersionInfo resourceName="ServiceCalloutfetchPrices" version="SHA-512:a0f8149c4c450cd6cd46b1da2fc7a9e45193dbd484fd0551a869829915ece113008ba6a3c8ad98d04112121b7d0879dc564c51e17bb495c99d70563425dd5374"/>
         <VersionInfo resourceName="VerifyAPIKey" version="SHA-512:902d53ff3ae4f7cd9083142a85407fe0ec59f38407867ea340d7bafce99cdfa9eb3f1272a4eea75779459c5ebb67a7b876fcec07a8ccb53c2326c7ac7162070f"/>
         <VersionInfo resourceName="parseAndCreateResponse" version="SHA-512:454d95a2250c583727709144064f2630416a6a5b301ef39054b9e0516ec209bdba181dcec8e4b6aca74027336544aa49973a56d515d64f4df8c0858860ed6b5c"/>
     </Policies>
     <ProxyEndpoints>
-        <VersionInfo resourceName="default" version="SHA-512:af0b0d06e1bffd69884fb2c83f9d45b41c69fa142b12be5df7bf1cf81df65875f5b509cec3684ec81faa4b7dabbb254fd197050262a9c399a129a088b700e8aa"/>
+        <VersionInfo resourceName="default" version="SHA-512:d38b29f6a9de147e86963f5ce3e484dd940e0279e2b37a45a91d565d5ec5bd24f4be4ba7e842e8db20ed48cd264fa643d6ce59fe996d11c8c9b2ac059848d9d2"/>
     </ProxyEndpoints>
     <Resources>
-        <VersionInfo resourceName="jsc://parseAndCreateResponse.js" version="SHA-512:5e1f81621d81ab3253465a987540aaec3a21d69928d493e1a5846d2bff6bd7596c2b266e7d5efc91339eca9a9ca5b9751dcab40bef60ca80bb5a5a472095bb06"/>
+        <VersionInfo resourceName="jsc://parseAndCreateResponse.js" version="SHA-512:0579f0558030822bc50b4f63cc0bd6234dbe682c783fe34564cad0d8b24c7bdf3549bfba225e900601220c33ffde260f5f331759d762a5e51d77d30d273cf6f2"/>
     </Resources>
     <SharedFlows/>
     <TargetEndpoints>
-        <VersionInfo resourceName="default" version="SHA-512:e565424a025192cbd0c17c4c3e227a90388e8361b0fed7c6a134ff00e83e9a512069171d0364d761a9c35d9c283a87cc98dfa4502342a7fa28cb272a9dbf8def"/>
+        <VersionInfo resourceName="default" version="SHA-512:550eeb6abcc493303b86c00720db62d5108b77e7d7001dd8bab1eceb33820705293c912fcbce961dfe839196303adca2f20e30957080e661c73f2a24ff6bf28e"/>
     </TargetEndpoints>
 </Manifest>
