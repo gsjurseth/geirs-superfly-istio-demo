@@ -1,20 +1,6 @@
-[{ 
-  "name": "two",
-  "number": 20 
-},
 { 
-  "name": "three",
-  "number": 30
-},
-{ 
-  "name": "four",
-  "number": 40
-},
-{ 
-  "name": "five",
-  "number": 50
-},
-{ 
-  "name": "one",
-  "number": 10
-}]
+  "items": [
+    { "ref": "mM/D2XpHRRaCik1wrixvNg==",
+      "quantity": 1 }
+  ]
+}

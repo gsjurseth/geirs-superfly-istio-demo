@@ -136,26 +136,23 @@ app.post('/md', cors(), async (req, res) => {
    });
 });
 
-app.get('/md/:name', cors(), (req, res) => {
-  md
-  .find({
-    name: req.params.name 
-  })
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+app.get('/md/:id', cors(), (req, res) => {
+  md.findOne({_id: req.params.id})
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
 });
 
-app.put('/md/:name', cors(), (req, res) => {
+app.put('/md/:id', cors(), (req, res) => {
   md
   .findOneAndUpdate(
     {
-      name: req.params.name
+      _id: req.params.id
     }, 
     Object.assign({},req.body)
     ,
@@ -172,10 +169,10 @@ app.put('/md/:name', cors(), (req, res) => {
   });
 });
 
-app.delete('/md/:name', cors(), (req, res) => {
+app.delete('/md/:id', cors(), (req, res) => {
   md
   .findOneAndRemove({
-    name: req.params.name
+    _id: req.params.id
   })
   .then(response => {
     console.log(response);

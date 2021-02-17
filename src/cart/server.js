@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import cart from './cart-schema.js';
+import uuid from 'uuid-mongodb';
 
 let mongohost = process.env.mongohost || 'localhost';
 let mongoport = process.env.mongoport || 27017;
@@ -33,6 +34,11 @@ app.get('/cart', (req, res) => {
 });
 
 app.post('/cart', (req, res) => {
+  if (!(Array.isArray(req.body))) {
+    let b = req.body;
+    req.body = [b];
+  }
+
   cart.insertMany(req.body)
    .then(doc => {
      console.log(doc)
@@ -44,19 +50,16 @@ app.post('/cart', (req, res) => {
    });
 });
 
-app.get('/cart/:name', (req, res) => {
-  cart
-  .find({
-    name: req.params.name 
-  })
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+app.get('/cart/:id', (req, res) => {
+  cart.findOne({_id: req.params.id})
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
 });
 
 app.put('/cart/:name', (req, res) => {

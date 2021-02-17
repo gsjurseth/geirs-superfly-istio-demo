@@ -44,26 +44,23 @@ app.post('/warehouse', (req, res) => {
    });
 });
 
-app.get('/warehouse/:name', (req, res) => {
-  warehouse
-  .find({
-    name: req.params.name 
-  })
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+app.get('/warehouse/:id', (req, res) => {
+  warehouse.findOne({_id: req.params.id})
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
 });
 
-app.put('/warehouse/:name', (req, res) => {
+app.put('/warehouse/:id', (req, res) => {
   warehouse
   .findOneAndUpdate(
     {
-      name: req.params.name
+      _id: req.params.id
     }, 
     Object.assign({},req.body)
     ,
@@ -92,10 +89,10 @@ app.delete('/warehouse', (req, res) => {
     })
   });
 
-app.delete('/warehouse/:name', (req, res) => {
+app.delete('/warehouse/:id', (req, res) => {
   warehouse
   .findOneAndRemove({
-    name: req.params.name
+    _id: req.params.id
   })
   .then(response => {
     console.log(response);

@@ -44,26 +44,23 @@ app.post('/price', (req, res) => {
    });
 });
 
-app.get('/price/:name', (req, res) => {
-  price
-  .find({
-    name: req.params.name 
-  })
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+app.get('/price/:id', (req, res) => {
+  price.findOne({_id: req.params.id})
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
 });
 
-app.put('/price/:name', (req, res) => {
+app.put('/price/:id', (req, res) => {
   price
   .findOneAndUpdate(
     {
-      name: req.params.name
+      _id: req.params.id
     }, 
     Object.assign({},req.body)
     ,
@@ -98,10 +95,10 @@ app.delete('/price', (req, res) => {
   }
 });
 
-app.delete('/price/:name', (req, res) => {
+app.delete('/price/:id', (req, res) => {
   price
   .findOneAndRemove({
-    name: req.params.name
+    _id: req.params.id
   })
   .then(response => {
     console.log(response);

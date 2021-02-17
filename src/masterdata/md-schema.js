@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 // create a schema
 const masterdataSchema = new Schema({
-  _id:  { type: 'object', value: { type: 'Buffer'   }, default: () => uuid.v4(), required: true  },
+  _id:  { type: 'object', value: { type: 'Buffer' }, default: () => uuid.v4().toString(), required: true  },
   name: { type: String, required: true  },
   desc: { type: String, required: true  },
   img:  { type: String, required: true  }
