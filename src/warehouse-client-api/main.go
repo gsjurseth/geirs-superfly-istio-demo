@@ -12,14 +12,27 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"reflect"
 )
+
+type Config struct {
+	MDHOST string
+	MDPORT int
+	MDKEY  string
+	WHHOST string
+	WHPORT int
+	WHKEY  string
+}
 
 var (
 	Trace   *log.Logger
 	Info    *log.Logger
 	Warning *log.Logger
 	Error   *log.Logger
+	c       Config
 )
+
+//var c Config
 
 func Init(
 	traceHandle io.Writer,
@@ -57,17 +70,21 @@ type MasterData struct {
 	Number int    `json:"amount"`
 }
 
-type Config struct {
-	MDHOST string
-	MDPORT int
-	MDKEY  string
-	WHHOST string
-	WHPORT int
-	WHKEY  string
-}
-
 func main() {
 	Init(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr)
+
+	err := envconfig.Process("app", &c)
+	if err != nil {
+		log.Fatal(err.Error())
+	} else {
+		rc := reflect.ValueOf(&c).Elem()
+		for i := 0; i < rc.NumField(); i++ {
+			valueField := rc.Field(i)
+			typeField := rc.Type().Field(i)
+
+			Info.Printf("%s=%s\n", typeField.Name, valueField.Interface())
+		}
+	}
 	r := chi.NewRouter()
 
 	// A good base middleware stack
@@ -145,11 +162,6 @@ func retrieveStock(c Config) []Stock {
 
 func getStockWithDetails(w http.ResponseWriter, r *http.Request) {
 	renderer := render.New()
-	var c Config
-	err := envconfig.Process("app", &c)
-	if err != nil {
-		log.Fatal(err.Error())
-	}
 
 	stockCH := make(chan []Stock)
 	mdCH := make(chan []MasterData)
