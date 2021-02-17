@@ -32,7 +32,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: eu.gcr.io/geirs-purdy-project/warehouse:2
+        image: eu.gcr.io/geirs-purdy-project/apigee-warehouse:latest
         ports:
         - containerPort: 3000
         readinessProbe:
