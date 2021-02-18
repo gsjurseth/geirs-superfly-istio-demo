@@ -40,22 +40,6 @@ spec:
   gateways:
   - istio-system/gateway
   http:
-    #  - match:
-    #- uri:
-    #    prefix: "/"
-    #route:
-    #- destination:
-    #    host: kuard
-    #    port:
-    #      number: 80
-  - match:
-    - uri:
-        prefix: "/locations"
-    route:
-    - destination:
-        host: locationsservice
-        port:
-          number: 3000
   - match:
     - uri:
         prefix: "/md"
@@ -78,6 +62,14 @@ spec:
     route:
     - destination:
         host: warehouseservice
+        port:
+          number: 3000
+  - match:
+    - uri:
+        prefix: "/cart"
+    route:
+    - destination:
+        host: cartservice
         port:
           number: 3000
   - match:

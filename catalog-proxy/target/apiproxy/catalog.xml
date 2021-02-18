@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="catalog">
+    <Basepaths>/v1/products</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1598867759428</CreatedAt>
+    <CreatedBy>gsjurseth@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>products</DisplayName>
+    <LastModifiedAt>1599036676193</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:98217f0204a2dc1f49d74513c31e4e0572bd64b7f740676d3e8b124603f927368c4db4ad848759f077f78f300eb40015c31d43d6286d7cb8a94283561ed8e41b</ManifestVersion>
+    <Policies>
+        <Policy>AddCors</Policy>
+        <Policy>AssignMessageaddAuthHeader</Policy>
+        <Policy>AssignMessagesetPayload</Policy>
+        <Policy>RaiseFaultdenyAccess</Policy>
+        <Policy>Response-Cache-1</Policy>
+        <Policy>SC.fetchInStock</Policy>
+        <Policy>SC.fetchPrices</Policy>
+        <Policy>ServiceCalloutfetchPrices</Policy>
+        <Policy>VerifyAPIKey</Policy>
+        <Policy>parseAndCreateResponse</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://parseAndCreateResponse.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -78,22 +78,17 @@ app.put('/price/:id', (req, res) => {
 });
 
 app.delete('/price', (req, res) => {
-  if ( req.query.id ) {
-    price
-    .findByIdAndRemove( req.query.id )
-    .then(response => {
-      console.log(response);
-      return res.json(response);
+  price.deleteMany()
+    .then( x => {
+      console.log(x);
+      return res.json(x);
     })
-    .catch(err => {
-      console.error(err);
-      return res.status(500).send(err);
-    });
-  }
-  else {
-    return res.status(400).send("missing id");
-  }
-});
+    .catch( err => {
+      console.error(err)
+      return res.status(400).send({ msg: "done fucked up: ", error: err} );
+
+    })
+  });
 
 app.delete('/price/:id', (req, res) => {
   price

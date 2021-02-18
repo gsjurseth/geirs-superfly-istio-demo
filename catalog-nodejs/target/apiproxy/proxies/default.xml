@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+  <PreFlow name="PreFlow">
+    <Request>
+      <Step>
+        <Name>AM.setAuthHeader</Name>
+      </Step>
+      <Step>
+          <Name>VerifyAPIKey</Name>
+          <Condition>(request.verb != "OPTIONS")</Condition>
+      </Step>
+      <Step>
+          <Name>Response-Cache-1</Name>
+      </Step>
+  </Request>
+  <Response>
+      <Step>
+          <Name>AddCors</Name>
+      </Step>
+  </Response>
+  </PreFlow>
+  <Flows>
+      <Flow name="deny">
+          <Description/>
+          <Request>
+              <Step>
+                  <Name>RaiseFaultdenyAccess</Name>
+              </Step>
+          </Request>
+          <Response/>
+          <Condition>(request.verb = "POST") or (request.verb = "PUT") or (request.verb = "DELETE")</Condition>
+      </Flow>
+  </Flows>
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response/>
+  </PostFlow>
+  <HTTPProxyConnection>
+    <BasePath>/v2/catalog</BasePath>
+    <VirtualHost>secure</VirtualHost>
+  </HTTPProxyConnection>
+  <RouteRule name="NOROUTE">
+      <Condition>(request.verb == "OPTIONS")</Condition>
+  </RouteRule>
+  <RouteRule name="default">
+    <TargetEndpoint>default</TargetEndpoint>
+  </RouteRule>
+</ProxyEndpoint>

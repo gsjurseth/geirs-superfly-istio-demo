@@ -169,6 +169,19 @@ app.put('/md/:id', cors(), (req, res) => {
   });
 });
 
+app.delete('/md', (req, res) => {
+  md.deleteMany()
+    .then( x => {
+      console.log(x);
+      return res.json(x);
+    })
+    .catch( err => {
+      console.error(err)
+      return res.status(400).send({ msg: "done fucked up: ", error: err} );
+
+    })
+  });
+
 app.delete('/md/:id', cors(), (req, res) => {
   md
   .findOneAndRemove({
