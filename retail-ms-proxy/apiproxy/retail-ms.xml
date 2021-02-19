@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="retail-ms">
+    <Basepaths>/v1/retail</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1613637394057</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>retail-ms</DisplayName>
+    <LastModifiedAt>1613747023317</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:0b06eea78d0360d0cac9134d8ae2af8beac4bfd24c00a4ba0ac5050371888116c95f2b65f562a3dc6e4784abc2891e26dcd13ecd09aa8ad23dc50a519ac4a71d:eu-west-1</ManifestVersion>
+    <Policies>
+        <Policy>AMaddAuthHeader</Policy>
+        <Policy>add-cors</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

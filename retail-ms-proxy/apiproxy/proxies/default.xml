@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>verify-api-key</Name>
+                <Condition>(request.verb != "OPTIONS")</Condition>
+            </Step>
+            <Step>
+                <Name>remove-query-param-apikey</Name>
+                <Condition>(request.verb != "OPTIONS")</Condition>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>add-cors</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <Flows>
+        <Flow name="masterdata-GET">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/md") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="masterdata-POST">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/md") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="masterdata-PUT">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/md") and (request.verb = "PUT")</Condition>
+        </Flow>
+        <Flow name="masterdata-DELETE">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/md") and (request.verb = "DELETE")</Condition>
+        </Flow>
+        <Flow name="cart-GET">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/cart") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="cart-POST">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/cart") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="cart-PUT">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/cart") and (request.verb = "PUT")</Condition>
+        </Flow>
+        <Flow name="cart-DELETE">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/cart") and (request.verb = "DELETE")</Condition>
+        </Flow>
+        <Flow name="price-GET">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/price") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="price-POST">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/price") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="price-PUT">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/price") and (request.verb = "PUT")</Condition>
+        </Flow>
+        <Flow name="price-DELETE">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/price") and (request.verb = "DELETE")</Condition>
+        </Flow>
+        <Flow name="warehouse-GET">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/warehouse") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="warehouse-POST">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/warehouse") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="warehouse-PUT">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/warehouse") and (request.verb = "PUT")</Condition>
+        </Flow>
+        <Flow name="warehouse-DELETE">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/warehouse") and (request.verb = "DELETE")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/retail</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute">
+        <Condition>(request.verb = "OPTIONS")</Condition>
+    </RouteRule>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>
