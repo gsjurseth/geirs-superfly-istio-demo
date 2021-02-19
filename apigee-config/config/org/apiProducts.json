@@ -65,7 +65,7 @@
     "lastModifiedAt" : 1598347132467,
     "lastModifiedBy" : "gsjurseth@google.com",
     "name" : "Catalog-APIs",
-    "proxies" : [ "products", "catalog" ],
+    "proxies" : [ "products", "catalog", "catalogv2", "retail-ms" ],
     "scopes" : [ ]
   }
 ]
