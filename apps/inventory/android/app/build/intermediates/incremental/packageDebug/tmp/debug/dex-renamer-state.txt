@@ -1,0 +1,4 @@
+#Thu Feb 18 11:19:55 CET 2021
+base.0=/home/gsjurseth/git/geirs-superfly-istio-demo/apps/inventory/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+path.0=classes.dex

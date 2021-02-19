@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/gsjurseth/git/geirs-superfly-istio-demo/apps/inventory/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/gsjurseth/.gradle/caches/transforms-2/files-2.1/941dad184da7b0dfe023a1f7a3e8bd80/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}
