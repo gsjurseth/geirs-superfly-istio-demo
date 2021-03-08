@@ -97,16 +97,29 @@ async function insertEm(b) {
 }
 
 app.get('/md', cors(), (req, res) => {
-  md
-  .find()
-  .then(doc => {
-    console.log(doc);
-    res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+  if (req.query.name != null) {
+    md.findOne({name: req.query.name})
+      .then(doc => {
+        console.log(doc);
+        return res.json(doc);
+      })
+      .catch(err => {
+        console.error(err);
+        return res.status(500).send(err);
+      });
+    } 
+  else {
+    md
+    .find()
+    .then(doc => {
+      console.log(doc);
+      res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
+  }
 });
 
 /*
