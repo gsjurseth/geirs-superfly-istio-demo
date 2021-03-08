@@ -1,0 +1,32 @@
+{ "masterdata": 
+  [
+  {
+    "_id": "3f43a347-9ce3-4f4e-9623-c2102cfae468",
+    "name": "Flow",
+    "desc": "A pretty red flower",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "43b930dd-6a0c-49f1-b7f1-49a42d6500c6",
+    "name": "Bulbfamily",
+    "desc": "A simple lightbulb family",
+    "img": "https://static01.nyt.com/images/2017/02/12/realestate/12VIEW/12VIEW-superJumbo-v2.jpg",
+    "__v": 0
+  },
+  {
+    "_id": "b7013d50-f474-49b1-8f74-2ec0f1a05e63",
+    "name": "Snowball",
+    "desc": "a simple snowball",
+    "img": "https://media.istockphoto.com/photos/snowball-picture-id183432102?k=6&m=183432102&s=612x612&w=0&h=kxIGl5h8LvG4GbB16ApqSgcikqieSFU6_UFYt4VEFM0=",
+    "__v": 0
+  },
+  {
+    "_id": "0b68f441-0fb2-4169-83d2-7422dc6111c9",
+    "name": "Spoon",
+    "desc": "A classic spoon",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/618F1Xwm49L._AC_SL1500_.jpg",
+    "__v": 0
+  }
+]
+}
