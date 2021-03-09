@@ -20,16 +20,29 @@ app.options('/warehouse/:name', cors());
 
 app.use(express.json());
 app.get('/warehouse', (req, res) => {
-  warehouse
-  .find()
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+  if (req.query.md_ref != null) {
+    warehouse.findOne({md_ref: req.query.md_ref})
+      .then(doc => {
+        console.log(doc);
+        return res.json(doc);
+      })
+      .catch(err => {
+        console.error(err);
+        return res.status(500).send(err);
+      });
+  } 
+  else {
+    warehouse
+    .find()
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
+  }
 });
 
 app.post('/warehouse', (req, res) => {

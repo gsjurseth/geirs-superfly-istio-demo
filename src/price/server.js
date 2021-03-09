@@ -20,16 +20,29 @@ app.options('/price/:name', cors());
 
 app.use(express.json());
 app.get('/price', (req, res) => {
-  price
-  .find()
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+  if (req.query.md_ref != null) {
+    price.findOne({md_ref: req.query.md_ref})
+      .then(doc => {
+        console.log(doc);
+        return res.json(doc);
+      })
+      .catch(err => {
+        console.error(err);
+        return res.status(500).send(err);
+      });
+    } 
+  else {
+    price
+    .find()
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
+  }
 });
 
 app.post('/price', (req, res) => {

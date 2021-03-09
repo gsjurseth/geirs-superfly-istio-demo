@@ -1,20 +1,6 @@
 [{ 
-  "name": "two",
+  "md_ref": "0b68f441-0fb2-4169-83d2-7422dc6111c9",
+  "name": "Spoon",
   "price": 200 
-},
-{ 
-  "name": "three",
-  "price": 300
-},
-{ 
-  "name": "four",
-  "price": 400
-},
-{ 
-  "name": "five",
-  "price": 500
-},
-{ 
-  "name": "one",
-  "price": 100
-}]
+}
+]
