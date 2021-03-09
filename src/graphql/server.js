@@ -2,6 +2,10 @@ import { ApolloServer } from 'apollo-server';
 import resolvers from './resolvers';
 import typeDefs from './typeDefs';
 import MasterdataAPI from './datasources/masterdata';
+import PricesAPI from './datasources/prices';
+import WarehouseAPI from './datasources/warehouse';
+import CatalogAPI from './datasources/catalog';
+import CartAPI from './datasources/cart';
 
 const DEBUG=process.env.DEBUG || false;
 
@@ -12,9 +16,14 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => {
     return {
-      MasterdataAPI: new MasterdataAPI(DEBUG)
+      MasterdataAPI: new MasterdataAPI(DEBUG),
+      PricesAPI: new PricesAPI(DEBUG),
+      WarehouseAPI: new WarehouseAPI(DEBUG),
+      CatalogAPI: new CatalogAPI(DEBUG),
+      CartAPI: new CartAPI(DEBUG),
     }
-  }
+  },
+  tracing: true
 });
 
 // The `listen` method launches a web server.
