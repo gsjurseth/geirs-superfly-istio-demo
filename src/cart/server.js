@@ -21,16 +21,29 @@ app.options('/cart/:name', cors());
 
 app.use(express.json());
 app.get('/cart', (req, res) => {
-  cart
-  .find()
-  .then(doc => {
-    console.log(doc);
-    return res.json(doc);
-  })
-  .catch(err => {
-    console.error(err);
-    return res.status(500).send(err);
-  });
+  if (req.query.email != null) {
+    price.findOne({email: req.query.email})
+      .then(doc => {
+        console.log(doc);
+        return res.json(doc);
+      })
+      .catch(err => {
+        console.error(err);
+        return res.status(500).send(err);
+      });
+    } 
+  else {
+    cart
+    .find()
+    .then(doc => {
+      console.log(doc);
+      return res.json(doc);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send(err);
+    });
+  }
 });
 
 app.post('/cart', (req, res) => {
