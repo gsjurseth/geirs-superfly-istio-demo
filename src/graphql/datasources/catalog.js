@@ -13,6 +13,10 @@ class CatalogAPI extends RESTDataSource {
     this.stock = new WarehouseAPI(DEBUG);
   }
 
+  willSendRequest(request) {
+    request.headers.set('x-api-key', KEY);
+  }
+
   async getCatalog() {
     const response = await this.get('')
       .then( r => {

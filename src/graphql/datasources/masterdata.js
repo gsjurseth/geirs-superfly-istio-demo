@@ -8,6 +8,10 @@ class MasterdataAPI extends RESTDataSource {
     this.baseURL = `http://${process.env.MD_HOST || 'localhost'}:${process.env.MD_PORT || 3000}/md`;
   }
 
+  willSendRequest(request) {
+    request.headers.set('x-api-key', KEY);
+  }
+
   async getMasterdata() {
     const response = await this.get('')
       .then( r => {

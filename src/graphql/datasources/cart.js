@@ -1,6 +1,8 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
 import CatalogAPI from './catalog';
 
+const KEY = process.env.API_KEY || 'key';
+
 class CartAPI extends RESTDataSource {
 
   constructor(DEBUG) {
@@ -8,6 +10,10 @@ class CartAPI extends RESTDataSource {
     if (DEBUG) this.debug = true;
     this.baseURL = `http://${process.env.CART_HOST || 'localhost'}:${process.env.CART_PORT || 3000}/cart`;
     this.catalog = new CatalogAPI(DEBUG);
+  }
+
+  willSendRequest(request) {
+    request.headers.set('x-api-key', KEY);
   }
 
   async getCarts() {

@@ -10,6 +10,10 @@ class WarehouseAPI extends RESTDataSource {
     this.md = new MasterdataAPI();
   }
 
+  willSendRequest(request) {
+    request.headers.set('x-api-key', KEY);
+  }
+
   async getStock() {
     const response = await this.get('')
       .then( r => {

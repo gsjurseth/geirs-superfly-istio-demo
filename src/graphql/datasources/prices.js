@@ -10,6 +10,10 @@ class PricesAPI extends RESTDataSource {
     this.md = new MasterdataAPI();
   }
 
+  willSendRequest(request) {
+    request.headers.set('x-api-key', KEY);
+  }
+
   async getPrices() {
     const response = await this.get('')
       .then( r => {
