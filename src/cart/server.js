@@ -22,7 +22,7 @@ app.options('/cart/:name', cors());
 app.use(express.json());
 app.get('/cart', (req, res) => {
   if (req.query.email != null) {
-    price.findOne({email: req.query.email})
+    cart.findOne({email: req.query.email})
       .then(doc => {
         console.log(doc);
         return res.json(doc);
