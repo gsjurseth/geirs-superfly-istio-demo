@@ -13,6 +13,7 @@ class CartAPI extends RESTDataSource {
   }
 
   willSendRequest(request) {
+    if (this.debug) console.log('Setting x-api-key header to: %s', KEY);
     request.headers.set('x-api-key', KEY);
   }
 

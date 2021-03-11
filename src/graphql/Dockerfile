@@ -14,9 +14,12 @@ RUN npm install
 
 # Bundle app source
 COPY *.js ./
+ADD resolvers/ ./resolvers
+ADD typeDefs/ ./typeDefs
+ADD datasources/ ./datasources
 
 # copy the babelrc config
 COPY .babelrc ./
 
-EXPOSE 3000
+EXPOSE 4000
 CMD [ "npm", "start" ]

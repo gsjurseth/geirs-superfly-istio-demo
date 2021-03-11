@@ -42,6 +42,14 @@ spec:
   http:
   - match:
     - uri:
+        prefix: "/graphql"
+    route:
+    - destination:
+        host: graphql-service
+        port:
+          number: 4000
+  - match:
+    - uri:
         prefix: "/md"
     route:
     - destination:

@@ -1,5 +1,6 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
 import MasterdataAPI from './masterdata';
+const KEY = process.env.API_KEY || 'key';
 
 class PricesAPI extends RESTDataSource {
 
@@ -11,6 +12,7 @@ class PricesAPI extends RESTDataSource {
   }
 
   willSendRequest(request) {
+    if (this.debug) console.log('Setting x-api-key header to: %s', KEY);
     request.headers.set('x-api-key', KEY);
   }
 
@@ -67,12 +69,12 @@ class PricesAPI extends RESTDataSource {
 
   async priceReducer(m) {
     if (this.debug) console.log("In prices reducer: %j", m);
-    this.md.initialize({});
-    let md = await this.md.getMasterdataById(m.md_ref);
+    //this.md.initialize({});
+    //let md = await this.md.getMasterdataById(m.md_ref);
     let reduced = {
       id: m._id,
-      name: md.name,
-      md: md,
+      //name: md.name,
+      //md: md,
       price: m.price
     };
     if (this.debug) console.log("price reduced: %j", reduced);

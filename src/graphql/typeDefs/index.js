@@ -35,9 +35,9 @@ const typeDefs = gql`
   type Price {
     id: ID
     price: Int
-    name: String
     md: Masterdata
   }
+    #name: String
 
   type Stock {
     id: ID

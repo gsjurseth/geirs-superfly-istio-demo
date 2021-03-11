@@ -32,25 +32,27 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: eu.gcr.io/geirs-purdy-project/apigee-warehouse-client:latest
+        image: eu.gcr.io/geirs-purdy-project/apigee-graphql:latest
         ports:
-        - containerPort: 3333
+        - containerPort: 4000
         readinessProbe:
           exec:
             command:
             - sh
             - -c
-            - "netstat -anp | fgrep 3333"
+            - "netstat -anp | fgrep 4000"
           initialDelaySeconds: 5
         livenessProbe:
           exec:
             command:
             - sh
             - -c
-            - "netstat -anp | fgrep 3333"
+            - "netstat -anp | fgrep 4000"
           initialDelaySeconds: 5
           periodSeconds: 10
         env:
+          - name: DEBUG
+            value: "true"
           - name: MD_HOST
             value: "masterdataservice"
           - name: MD_PORT
@@ -67,11 +69,24 @@ spec:
             value: "cartservice"
           - name: CART_PORT
             value: "3000"
+          - name: REDIS_HOST
+            value: "redis-redis-cluster"
+          - name: REDIS_NS
+            value: "redis-redis-cluster-headless.redis"
+          - name: REDIS_NODES
+            value: "6"
+          - name: REDIS_PORT
+            value: "6379"
           - name: API_KEY
             valueFrom:
               secretKeyRef:
                 name: apisecrets
                 key: internalapikey
+          - name: REDIS_PASS
+            valueFrom:
+              secretKeyRef:
+                name: redissecrets
+                key: redispass
         resources:
           requests:
             cpu: 100m
@@ -89,7 +104,7 @@ metadata:
     app: graphql-service
 spec:
   ports:
-  - port: 3333
+  - port: 4000
     name: http
   selector:
     app: graphql-service

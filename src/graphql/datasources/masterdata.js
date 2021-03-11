@@ -1,4 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
+const KEY = process.env.API_KEY || 'key';
 
 class MasterdataAPI extends RESTDataSource {
 
@@ -9,6 +10,7 @@ class MasterdataAPI extends RESTDataSource {
   }
 
   willSendRequest(request) {
+    if (this.debug) console.log('Setting x-api-key header to: %s', KEY);
     request.headers.set('x-api-key', KEY);
   }
 
