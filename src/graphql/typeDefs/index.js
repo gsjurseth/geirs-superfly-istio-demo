@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server';
+import { gql } from "apollo-server";
 
 // your data.
 const typeDefs = gql`
@@ -7,7 +7,7 @@ const typeDefs = gql`
   type Cart {
     items: [CartItem]
     email: String!
-    id: ID!
+  "  id: ID!
   }
 
   type CartItem {
@@ -37,7 +37,7 @@ const typeDefs = gql`
     price: Int
     md: Masterdata
   }
-    #name: String
+  #name: String
 
   type Stock {
     id: ID

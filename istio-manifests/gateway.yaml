@@ -11,23 +11,23 @@ spec:
   selector:
     istio: ingressgateway # use istio default controller
   servers:
-  - port:
+  - hosts:
+      - "devapi.evils.in"
+    port:
       number: 80
       name: http
       protocol: HTTP
-    hosts:
-    - "*"
-  - port:
+  - hosts:
+      - "devapi.evils.in"
+    port:
       number: 443
       name: https
       protocol: HTTPS
     tls:
       mode: SIMPLE
-      credentialName: test-certificate
-      #      privateKey: sds
+      credentialName: cert-devapi.evils.in
+      #privateKey: sds
       #serverCertificate: sds
-    hosts:
-      - "devapi.evils.in"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
