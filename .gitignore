@@ -67,3 +67,5 @@ yarn.json
 
 certs
 yarn.lock
+
+.config
