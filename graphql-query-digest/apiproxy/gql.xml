@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="gql">
+    <Basepaths>/gql</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1615892250792</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>gql</DisplayName>
+    <LastModifiedAt>1615895599504</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:de49ca3ae30400ae62aa632ccb7948de6c4a10edce1a6ba4d9a33c8635e38c279b8cc5b930314cc33dcf7cbcb0593ee75bf115ca1ed9759e1c8a87da3f5f9a01:eu-west-1</ManifestVersion>
+    <Policies>
+        <Policy>AMsetApiKey</Policy>
+        <Policy>JCgqlQueryDigest</Policy>
+        <Policy>KVM.getKey</Policy>
+        <Policy>ResponseCache</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>java://antlr4-runtime-4.8.jar</Resource>
+        <Resource>java://graphql-java-16.2.jar</Resource>
+        <Resource>java://graphql-query-digest.jar</Resource>
+        <Resource>java://json-20190722.jar</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="JC.gqlQueryDigest">
+    <DisplayName>JC.gqlQueryDigest</DisplayName>
+    <Properties/>
+    <ClassName>com.apigee.graphql.QueryDigest</ClassName>
+    <ResourceURL>java://graphql-query-digest.jar</ResourceURL>
+</JavaCallout>

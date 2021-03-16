@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AMsetApiKey" version="SHA-512:7144b08328d2dab68f91c171d407be0cedacb18f4add6414f05af36a6e2141bc15f4583ced55433c3bfd6669341be68565df386ef96f80618494031844fca148"/>
+        <VersionInfo resourceName="JCgqlQueryDigest" version="SHA-512:c7d24135a5bf111e3548a53ed79c4e71c52041381aabaec8b417c5af251d963675123d5c0c9e502fab4ef7855e8f1007c772d31dc2e74f21166a9025a9f9882f"/>
+        <VersionInfo resourceName="KVM.getKey" version="SHA-512:ae00a42dabd86d4ccad0e37264c57256c41ef70ddb637a33a9ed6e0a067921b20c6a954eab2dcf18c88e372f7869abb564a87f4a21a34597ce7a2eea51e7ab72"/>
+        <VersionInfo resourceName="ResponseCache" version="SHA-512:8a1b9e04e198481867f7b10687a846e37757c8bfb48ee0ca0b4be8ec2823eacc080c93229ec49f910ab27f6f4153bf22eb3b8704317a555348d9bf13780b69db"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:6106ae0b4caba01bd42cf157e3b87589e6b88ffc12df5d6a97dcc0e0296b3774be1418e9808be207e5ad8e5a711fb18a8de5bfed8503b63416fe03e4030353d4"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="java://antlr4-runtime-4.8.jar" version="SHA-512:30ed2caaba9fc322d7326659e37775bebec0e1903e67ddf32a2833a2b27218ffc030e9295f4ddd66e1ad5c9ca4fae3bb9dee68aba2acc2fe86d48fc93e5705ec"/>
+        <VersionInfo resourceName="java://graphql-java-16.2.jar" version="SHA-512:05bd4b220a646912d68288958036079da67dfaad07c9f4f1c9b3ae890d4c61dc8f1154420d2799464dca60a3164bc9e3ec8ff60e5fab7e4dcea65ab722269cec"/>
+        <VersionInfo resourceName="java://graphql-query-digest.jar" version="SHA-512:354a4300a1c06170f82f8ecffc090d98d35ac3f005964dbbf6260cb1f03ab4b50a8833953414df482f079d975cf252fca2f48b1fd0bf02de12c8f4459ab3e460"/>
+        <VersionInfo resourceName="java://json-20190722.jar" version="SHA-512:2c815bcd5b3efe683bf3e9f47d559be0934d35ac63299522f3143ca072ae414177c4dc909ff1db4957b93e79eddfa971d5f65fb34c9608eb65083a7e3f57b10c"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:f90025ce335044536737dec6a3f6432485a2a0a4f368b83e9d3d838aaa32e9b521bc3efe0f18c019db2c24d148f19b1805b35bb4a1d173b9cf9a1e4aa18283bf"/>
+    </TargetEndpoints>
+</Manifest>
